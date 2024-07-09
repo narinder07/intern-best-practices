@@ -1,0 +1,60 @@
+.contact-bg {
+  background: linear-gradient(rgba(19, 59, 189, 0.648), rgba(37, 15, 112, 0.4)),
+    url("../../assets/contact-bg.png");
+  padding: 60px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contact-para {
+  max-width: 400px;
+}
+.contact-heading {
+  color: #ff4f9d;
+  font-weight: 500;
+}
+.contact-me li a {
+  text-decoration: none;
+  color: white;
+}
+.contact-me li {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.contact-form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 200px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.submit-btn button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #884cd2;
+  color: white;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.submit-btn button:hover {
+  background-color: #ff4f9d;
+  transform: scale(1.1);
+}
