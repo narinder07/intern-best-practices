@@ -44,7 +44,7 @@ const Contact = () => {
     setFormError(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      <div className="text-">Message is successfully done</div>;
+      alert("Message is submit");
     }
   };
 
