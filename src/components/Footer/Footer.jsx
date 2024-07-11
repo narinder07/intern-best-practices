@@ -33,13 +33,13 @@ const Footer = () => {
                 <li>
                   <Link to="">
                     <MdLocalPhone className="me-2  social-icons" />
-                    +918604737583
+                    +919115955017
                   </Link>
                 </li>
                 <li>
                   <Link to="">
                     <MdOutlineEmail className="me-2  social-icons" />
-                    Example@gmail.com
+                    narindersingh0069@gmail.com
                   </Link>
                 </li>
               </div>
