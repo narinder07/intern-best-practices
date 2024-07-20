@@ -63,6 +63,7 @@ const Contact = () => {
               <li>
                 <MdOutlineEmail className="me-2 social-icons" />
                 <Link to="#">narindersingh00690@gmail.com</Link>
+
               </li>
               <li>
                 <MdLocalPhone className="me-2 social-icons" />
