@@ -27,7 +27,7 @@ const Navbar = () => {
           <li className="me-3">
             <Link to="#" target="_blank">
               <MdOutlineEmail className="me-2 social-icons " />
-              Example@gmail.com
+              narindersingh00690@gmail.com
             </Link>
           </li>
           <li className="me-3">
