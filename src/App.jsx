@@ -10,7 +10,6 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -18,7 +17,6 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
-      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
