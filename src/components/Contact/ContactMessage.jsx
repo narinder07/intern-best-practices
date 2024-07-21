@@ -1,9 +1,9 @@
 import { MdLocalPhone, MdOutlineEmail, MdLocationOn } from "react-icons/md";
-import "./Contact.css";
+import "./ContactMessage.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Contact = () => {
+const ContactMessage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     email: "",
@@ -123,4 +123,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactMessage;

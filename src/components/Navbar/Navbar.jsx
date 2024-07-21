@@ -68,19 +68,19 @@ const Navbar = () => {
         </Link>
         <ul className="nav-links" ref={navRef}>
           <li>
-            <Link to="#">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="#">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="#">Blog</Link>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="#">Services</Link>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to="#">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </li>
 
           <img src={closeNavbar} className="close-bar" onClick={showNavBar} />

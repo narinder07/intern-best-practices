@@ -1,16 +1,25 @@
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Contact from "./components/Contact/Contact";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Blog from "./pages/Blog/Blog";
+import Services from "./pages/Services/Services";
+import ContactUs from "./pages/Contact Us/ContactUs";
+// import Footer from "./components/Footer/Footer";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Contact />
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<ContactUs />} />
+      </Routes>
+      {/* <Footer /> */}
+    </BrowserRouter>
   );
 };
 
