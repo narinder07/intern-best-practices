@@ -1,8 +1,10 @@
+import PriceDetails from "../../components/PriceDetails/PriceDetails";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <>
+      <PriceDetails />
+    </>
   );
 };
 

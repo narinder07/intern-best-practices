@@ -63,7 +63,7 @@ const Navbar = () => {
 
       {/* Main nav start */}
       <div className="main-nav sticky-top">
-        <Link to="/" className="logo">
+        <Link to="/home" className="logo">
           React<span className="logo-style">Project</span>
         </Link>
         <ul className="nav-links" ref={navRef}>
