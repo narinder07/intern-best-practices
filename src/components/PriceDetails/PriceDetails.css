@@ -1,11 +1,11 @@
 .bg-color1,
 .bg-color2 {
-  background-color: #021016;
+  background-color: var(--color-black);
   padding: 20px 40px;
   border-radius: 10px;
 }
 .bg-color2 {
-  background-color: #3cbeee;
+  background-color: var(--color-blue);
 }
 .best-offers2 p {
   color: gray;
@@ -14,22 +14,22 @@
   color: white;
 }
 .bg-color1 h4 {
-  color: #3cbeee;
+  color: var(--color-blue);
   padding: 20px 0;
 }
 .bg-color2 h4 {
   padding: 20px 0;
 }
 .color-blue {
-  color: #3cbeee;
+  color: var(--color-blue);
 }
 .color-black {
-  color: black;
+  color: var(--color-black);
 }
 .best-offers3 button,
 .best-offers2 button,
 .best-offers1 button {
-  background-color: #021016;
+  background-color: var(--color-black);
   color: white;
   padding: 14px 20px;
   border: none;
@@ -38,24 +38,24 @@
   transition: 0.4s;
 }
 .best-offers1 button {
-  background-color: #3cbeee;
+  background-color: var(--color-blue);
   color: white;
 }
 .best-offers1 button:hover {
-  background-color: #021016;
+  background-color: var(--color-black);
   color: white;
 }
 .best-offers2 button {
   background-color: white;
-  color: #3cbeee;
+  color: var(--color-blue);
 }
 .best-offers2 button:hover {
-  background-color: #3cbeee;
+  background-color: var(--color-blue);
   color: white;
 }
 .best-offers3 button:hover {
   background-color: white;
-  color: #3cbeee;
+  color: var(--color-blue);
 }
 .package-title2 h2,
 p {

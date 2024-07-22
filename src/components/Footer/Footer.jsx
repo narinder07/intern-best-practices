@@ -133,14 +133,14 @@ const Footer = () => {
       {/* copyright section  */}
       <div className="copyRight-footer container-fluid py-4">
         <div className="container">
-          <div className="row gy-4">
+          <div className="row">
             <div className="col-lg-4">
               <p className="text-white">
-                <span className="text-color">My React Project</span> All right
+                <span className="text-blue">My React Project</span> All right
                 reserved.
               </p>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-3">
               <div className="social-media">
                 <li>
                   <Link to="#"></Link>
@@ -162,8 +162,8 @@ const Footer = () => {
             </div>
             <div className="col-lg-4">
               <p className="text-white">
-                Designed By <span className="text-color">Narinder</span> By
-                Using <span className="text-color">React and Bootstrap</span>
+                Designed By <span className="text-blue">Narinder</span> By Using
+                <span className="text-blue">React and Bootstrap</span>
               </p>
             </div>
           </div>

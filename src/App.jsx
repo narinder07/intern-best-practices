@@ -4,7 +4,7 @@ import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
 import Services from "./pages/Services/Services";
 import ContactUs from "./pages/Contact Us/ContactUs";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

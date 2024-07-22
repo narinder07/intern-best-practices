@@ -1,5 +1,5 @@
 .contact-bg {
-  background: linear-gradient(rgba(19, 59, 189, 0.648), rgba(37, 15, 112, 0.4)),
+  background: linear-gradient(rgba(15, 117, 161, 0.648), rgba(15, 75, 112, 0.4)),
     url("../../assets/contact-bg.png");
   padding: 60px;
   background-position: center;
@@ -10,7 +10,7 @@
   max-width: 400px;
 }
 .contact-heading {
-  color: #ff4f9d;
+  color: var(--color-blue);
   font-weight: 500;
 }
 .contact-me li a {
@@ -49,12 +49,12 @@
 .submit-btn button {
   padding: 10px 16px;
   border: none;
-  background-color: #884cd2;
+  background-color: var(--color-blue);
   color: white;
   border-radius: 10px;
   transition: 0.4s;
 }
 .submit-btn button:hover {
-  background-color: #ff4f9d;
+  color: var(--color-black);
   transform: scale(1.1);
 }
