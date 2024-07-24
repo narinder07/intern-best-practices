@@ -62,6 +62,9 @@
   color: white;
   transition: 0.4s;
 }
+.nav-links .active {
+  color: var(--color-black);
+}
 .nav-links li a:hover {
   color: var(--color-black);
 }

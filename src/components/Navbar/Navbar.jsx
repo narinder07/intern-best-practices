@@ -68,7 +68,9 @@ const Navbar = () => {
         </Link>
         <ul className="nav-links" ref={navRef}>
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/home" className="active">
+              Home
+            </Link>
           </li>
           <li>
             <Link to="/about">About</Link>
