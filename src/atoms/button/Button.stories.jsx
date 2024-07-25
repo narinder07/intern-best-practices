@@ -1,50 +1,31 @@
-import { action } from '@storybook/addon-actions';
-import Button from './Button';
-import { color } from 'storybook/internal/theming';
+import Button from "./Button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Button',
+  title: "Atoms/Button",
   component: Button,
-  parameters: {
-    layout: 'centered',
-  },
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-  args: { onClick: action('clicked') },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
+export const Button1 = {
   args: {
-    primary: true,
-    label: 'Button',
-    style: {
-      backgroundColor: "blue",
-      color:"white",
-      padding:"10px 18px",
-    }
+    label: "Buy Now",
+    type: "button",
+    className: "primary-custom1",
   },
 };
 
-export const Secondary = {
+export const Button2 = {
   args: {
-    label: 'Button',
+    label: "Button",
+    className: "primary-custom2",
   },
 };
 
-export const Large = {
+export const Button3 = {
   args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
+    size: "large",
+    label: "Button",
+    className: "primary-custom3",
   },
 };
