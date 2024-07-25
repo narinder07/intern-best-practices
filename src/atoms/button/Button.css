@@ -1,6 +1,6 @@
-.primary-custom1,
-.primary-custom2,
-.primary-custom3 {
+.primary-blue,
+.primary-white,
+.primary-black {
   color: #fff;
   background-color: #3cbeee;
   border: none;
@@ -8,22 +8,24 @@
   padding: 16px 32px;
   transition: 0.4s;
 }
-.primary-custom1:hover {
+
+.primary-blue:hover {
   background-color: #021016;
 }
-.primary-custom2 {
+
+.primary-white {
   background-color: white;
   color: #3cbeee;
 }
-.primary-custom2:hover {
+.primary-white:hover {
   background-color: #3cbeee;
   color: white;
 }
-.primary-custom3 {
+.primary-black {
   background-color: #021016;
   color: white;
 }
-.primary-custom3:hover {
+.primary-black:hover {
   background-color: white;
   color: #3cbeee;
 }

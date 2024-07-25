@@ -7,22 +7,22 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Button1 = {
+export const ButtonBlue = {
   args: {
     label: "Buy Now",
     type: "button",
-    className: "primary-white",
-  },
-};
-
-export const Button2 = {
-  args: {
-    label: "Button",
     className: "primary-blue",
   },
 };
 
-export const Button3 = {
+export const ButtonWhite = {
+  args: {
+    label: "Button",
+    className: "primary-white",
+  },
+};
+
+export const ButtonBlack = {
   args: {
     size: "large",
     label: "Button",
