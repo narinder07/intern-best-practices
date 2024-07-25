@@ -11,14 +11,14 @@ export const Button1 = {
   args: {
     label: "Buy Now",
     type: "button",
-    className: "primary-custom1",
+    className: "primary-white",
   },
 };
 
 export const Button2 = {
   args: {
     label: "Button",
-    className: "primary-custom2",
+    className: "primary-blue",
   },
 };
 
@@ -26,6 +26,6 @@ export const Button3 = {
   args: {
     size: "large",
     label: "Button",
-    className: "primary-custom3",
+    className: "primary-black",
   },
 };
