@@ -1,0 +1,9 @@
+.ul-custom {
+  display: inline-flex;
+  list-style: none;
+}
+
+.ul-custom li {
+  padding: 0px 5%;
+  width: 100%;
+}

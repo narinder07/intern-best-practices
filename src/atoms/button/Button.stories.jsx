@@ -17,15 +17,16 @@ export const ButtonBlue = {
 
 export const ButtonWhite = {
   args: {
-    label: "Button",
+    label: "Buy Now",
+    type: "button",
     className: "primary-white",
   },
 };
 
 export const ButtonBlack = {
   args: {
-    size: "large",
-    label: "Button",
+    label: "Buy Now",
+    type: "button",
     className: "primary-black",
   },
 };

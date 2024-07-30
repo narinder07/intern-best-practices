@@ -33,7 +33,6 @@ const Footer = () => {
                 <li>
                   <Link to="">
                     <MdLocalPhone className="me-2  social-icons" />
-
                     +919115955017
                   </Link>
                 </li>
