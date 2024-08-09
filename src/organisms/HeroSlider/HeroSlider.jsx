@@ -4,29 +4,35 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectFade } from "swiper/modules";
 import "swiper/css/effect-fade";
+import "./HeroSlider.css";
 
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 const HeroSlider = (props) => {
   return (
     <>
       <Swiper
-        pagination={{
-          type: "fraction",
-        }}
         effect={"fade"}
         navigation={true}
         fadeEffect={{ crossFade: true }}
-        spaceBetween={20}
         speed={1500}
         slidesPerView={1}
         autoplay={{ delay: 2500 }}
-        modules={[Pagination, Navigation, Autoplay, EffectFade]}
+        modules={[Navigation, Autoplay, EffectFade]}
         style={{ "--swiper-navigation-color": "#fff" }}
       >
-        {props.imageSlides.map((img, index) => (
-          <SwiperSlide key={index}>
-            <img src={img.image} alt={img.alt} />
+        {props.imageSlides.map((sliderImg, sliderIndex) => (
+          <SwiperSlide key={sliderIndex}>
+            <div className=" slider-image">
+              <img
+                src={sliderImg.image}
+                className="image-fluid hero-slider-image"
+                alt={sliderImg.alt}
+              />
+              <div className="slider-title text-center">
+                <h1 className="display-4 text-white">{sliderImg.label}</h1>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
