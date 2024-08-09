@@ -15,8 +15,6 @@ const Icon = (props) => {
   // Access the icon dynamically from Icons object
   const icon = fullIcons[iconKey];
 
-  console.log("icon :", icon);
-
   return (
     <>
       <li className={props.liClass}>

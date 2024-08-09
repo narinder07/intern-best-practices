@@ -3,7 +3,14 @@
   list-style: none;
 }
 
-.ul-custom li {
-  padding: 0px 5%;
-  width: 100%;
+.ul-custom li a {
+  padding: 0px 20px;
+  text-decoration: none;
+  color: #021016;
+  font-size: 18px;
+  transition: 0.4s ease-in-out;
+}
+
+.ul-custom li a:hover {
+  color: #3cbeee;
 }

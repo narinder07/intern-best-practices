@@ -9,9 +9,10 @@ export default {
 const Template = (args) => <Icon {...args}></Icon>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const View = Template({});
-View.args = {
-  label: "narindersingh00690@gmail.com",
+export const WebIcons = Template({});
+WebIcons.args = {
+  label: "Example@gmail.com",
   iconName: "house",
   ClassNames: "icon",
+  href: "#",
 };

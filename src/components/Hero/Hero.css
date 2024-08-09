@@ -1,6 +1,7 @@
 .hero-section {
-  background-image: url("../../assets/purple.png");
+  /* background-image: url("../../assets/purple.png"); */
   min-height: 100vh;
+  background-color: purple;
   width: 100%;
   display: flex;
   align-items: center;

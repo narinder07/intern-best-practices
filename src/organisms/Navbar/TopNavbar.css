@@ -27,6 +27,9 @@
   display: flex;
   align-items: center;
 }
+.connect-right li a:hover {
+  cursor: pointer;
+}
 
 .social-icon {
   color: #00bcd4;

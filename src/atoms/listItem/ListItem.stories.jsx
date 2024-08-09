@@ -12,4 +12,5 @@ HomeTab.args = {
   href: "#",
   key: "home",
   name: "Home",
+  classes: "list-items",
 };

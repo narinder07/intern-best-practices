@@ -7,10 +7,11 @@ export default {
 
 const Template = (args) => <TopNavbar {...args}></TopNavbar>;
 
-export const TopNavbarIcons = Template.bind();
-TopNavbarIcons.args = {
-  phone: "+919876543210",
-  email: "demo@gmail.com",
+export const WebTopNavbar = Template.bind();
+WebTopNavbar.args = {
+  phone: "+919115955017",
+  href: "tel:9115955017",
+  email: "narindersingh00690@gmail.com",
   facebook: "http://facebook.com",
   instagram: "http://instagram.com",
   linkedin: "http://lindedin.com",

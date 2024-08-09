@@ -6,27 +6,27 @@ export default {
   component: Button,
 };
 
+const Template = (args) => <Button {...args}></Button>;
+
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const ButtonBlue = {
-  args: {
-    label: "Buy Now",
-    type: "button",
-    className: "primary-blue",
-  },
+
+export const ButtonBlue = Template.bind({});
+ButtonBlue.args = {
+  label: "Buy Now",
+  type: "button",
+  className: "primary-blue",
 };
 
-export const ButtonWhite = {
-  args: {
-    label: "Buy Now",
-    type: "button",
-    className: "primary-white",
-  },
+export const ButtonWhite = Template.bind({});
+ButtonWhite.args = {
+  label: "Buy Now",
+  type: "button",
+  className: "primary-white",
 };
 
-export const ButtonBlack = {
-  args: {
-    label: "Buy Now",
-    type: "button",
-    className: "primary-black",
-  },
+export const ButtonBlack = Template.bind({});
+ButtonBlack.args = {
+  label: "Buy Now",
+  type: "button",
+  className: "primary-black",
 };
