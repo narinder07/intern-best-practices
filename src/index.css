@@ -10,11 +10,7 @@ li {
 a {
   text-decoration: none;
 }
-.text-color {
-  color: #ff4f9d;
-}
-
-.sectionPadding {
+.section-padding {
   margin-top: 70px;
   margin-bottom: 70px;
 }

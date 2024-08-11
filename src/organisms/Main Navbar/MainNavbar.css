@@ -21,3 +21,6 @@
   transition: 0.4s;
   cursor: pointer;
 }
+.nav-links li a:hover {
+  color: #00bcd4 !important;
+}

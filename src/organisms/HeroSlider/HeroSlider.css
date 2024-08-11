@@ -32,8 +32,5 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat !important;
-  background-color: linear-gradient(
-    rgba(206, 20, 20, 0.8),
-    rgb(183, 23, 23)
-  ) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
 }

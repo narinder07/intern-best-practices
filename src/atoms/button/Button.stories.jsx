@@ -1,15 +1,11 @@
 import Button from "./Button";
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Atoms/Button",
   component: Button,
 };
 
 const Template = (args) => <Button {...args}></Button>;
-
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-
 export const ButtonBlue = Template.bind({});
 ButtonBlue.args = {
   label: "Buy Now",
@@ -29,4 +25,11 @@ ButtonBlack.args = {
   label: "Buy Now",
   type: "button",
   className: "primary-black",
+};
+
+export const ReadMoreButton = Template.bind({});
+ReadMoreButton.args = {
+  label: "Read More",
+  type: "button",
+  className: "read-more",
 };

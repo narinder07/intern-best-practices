@@ -1,12 +1,20 @@
 .primary-blue,
 .primary-white,
-.primary-black {
+.primary-black,
+.read-more {
   color: #fff;
   background-color: #3cbeee;
   border: none;
   border-radius: 30px;
   padding: 16px 32px;
   transition: 0.4s;
+}
+.read-more {
+  padding: 8px 24px;
+}
+
+.read-more:hover {
+  background-color: #021016;
 }
 
 .primary-blue:hover {

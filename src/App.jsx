@@ -1,10 +1,12 @@
 import TopNavbar from "./organisms/Navbar/TopNavbar";
 import MainNavbar from "./organisms/Main Navbar/MainNavbar";
-import Footer from "./components/Footer/Footer";
-import Contact from "./components/Contact/Contact";
 import HeroSlider from "./organisms/HeroSlider/HeroSlider";
 import heroImg1 from "./assets/nature_img1.jpg";
 import heroImg2 from "./assets/nature_img2.jpg";
+import Card from "./organisms/Card/Card";
+import cardImg1 from "./assets/card_img1.jpg";
+import cardImg2 from "./assets/card_img2.jpg";
+import cardImg3 from "./assets/card_img3.jpg";
 
 const App = () => {
   //Hero slider image
@@ -49,6 +51,30 @@ const App = () => {
       name: "Contact Us",
     },
   ];
+  // cards
+  const cardsInfo = [
+    {
+      cardImages: cardImg1,
+      label: "Mountains",
+      captionPara:
+        "It maintains an ecological system to make everyone live in harmony.",
+      alt: "card image 1",
+    },
+    {
+      cardImages: cardImg2,
+      label: "Beautiful Tress",
+      captionPara: "Nature consists of everything that we can see and feel.",
+      alt: "card image 2",
+    },
+    {
+      cardImages: cardImg3,
+      label: "Rivers",
+      captionPara:
+        "Nature holds a balance between diverse ecosystems for smooth functioning.",
+      alt: "card image 3",
+    },
+  ];
+
   return (
     <>
       <TopNavbar
@@ -68,8 +94,7 @@ const App = () => {
         menuItems={menuItems}
       />
       <HeroSlider imageSlides={imageSlides} />
-      <Contact />
-      <Footer />
+      <Card cardsInfo={cardsInfo} />
     </>
   );
 };
