@@ -1,9 +1,11 @@
+import Button from "../../atoms/button/Button";
 import "./Card.css";
+
 const Card = (props) => {
   return (
     <section>
       <div className="container section-padding">
-        <div className="row g-4">
+        <div className="row gy-4">
           {props.cardsInfo.map((cardDetails, cardKey) => (
             <div className="col-lg-4" key={cardKey}>
               <div className="cards-items">
@@ -15,6 +17,11 @@ const Card = (props) => {
                 <div className="card-text">
                   <h2 className="text-white">{cardDetails.label}</h2>
                   <p className="text-white">{cardDetails.captionPara}</p>
+                  <Button
+                    label="Read More"
+                    type="button"
+                    className="read-more"
+                  />
                 </div>
               </div>
             </div>

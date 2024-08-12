@@ -22,7 +22,8 @@ WebCards.args = {
     {
       cardImages: cardImg2,
       label: "Beautiful Tress",
-      captionPara: "Nature consists of everything that we can see and feel.",
+      captionPara:
+        "Nature provides us with water to drink, air to breathe, food to eat, clothes to wear, and a shelter to live in.",
       alt: "card image 2",
     },
     {

@@ -10,6 +10,7 @@
   left: "50%";
   transform: "translate(-50%, -50%)";
 }
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   background-color: #00bcd4;
@@ -32,5 +33,4 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat !important;
-  background: rgba(0, 0, 0, 0.7) !important;
 }
