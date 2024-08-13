@@ -14,6 +14,6 @@ WebTopNavbar.args = {
   email: "narindersingh00690@gmail.com",
   facebook: "http://facebook.com",
   instagram: "http://instagram.com",
-  linkedin: "http://lindedin.com",
+  linkedin: "https://x.com/?lang=en&mx=2",
   twitter: "http://twitter.com",
 };

@@ -26,7 +26,7 @@ const HeroSlider = (props) => {
             <div className=" slider-image">
               <img
                 src={sliderImg.image}
-                className="image-fluid hero-slider-image"
+                className="hero-slider-image"
                 alt={sliderImg.alt}
               />
               <div className="slider-title text-center">

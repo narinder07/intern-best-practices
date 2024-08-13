@@ -18,7 +18,7 @@ const Icon = (props) => {
   return (
     <>
       <li className={props.liClass}>
-        <a href={props.href}>
+        <a target="_blank" href={props.href}>
           <FontAwesomeIcon className={props.class} icon={icon} />
           {props.label}
         </a>

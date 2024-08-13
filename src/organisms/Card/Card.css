@@ -4,12 +4,28 @@
 }
 .cards-items .card-text {
   position: absolute;
-  top: 40px;
-  left: 20px;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 2;
+  padding: 1.5rem !important;
 }
+
 .cards-items .card-img {
-  border-radius: 7px;
+  box-shadow:
+    0 4px 8px 0 rgba(23, 110, 168, 0.276),
+    0 6px 20px 0 rgba(9, 55, 65, 0.242);
+  border-radius: 10px;
 }
 .card-text p {
   font-size: 15px;
+}
+.read-more:hover svg {
+  transition: 0.4s;
+  transform: translateX(3px);
 }
