@@ -1,6 +1,3 @@
-.primary-blue,
-.primary-white,
-.primary-black,
 .read-more {
   color: #fff;
   background-color: #3cbeee;
@@ -15,25 +12,4 @@
 
 .read-more:hover {
   background-color: #021016;
-}
-
-.primary-blue:hover {
-  background-color: #021016;
-}
-
-.primary-white {
-  background-color: white;
-  color: #3cbeee;
-}
-.primary-white:hover {
-  background-color: #3cbeee;
-  color: white;
-}
-.primary-black {
-  background-color: #021016;
-  color: white;
-}
-.primary-black:hover {
-  background-color: white;
-  color: #3cbeee;
 }

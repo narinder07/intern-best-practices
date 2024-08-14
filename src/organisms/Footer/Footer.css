@@ -1,0 +1,8 @@
+.footer-quick-links li a,
+.footer-service-links li a {
+  text-decoration: none;
+}
+.footer-quick-links li,
+.footer-service-links li {
+  list-style: none;
+}
