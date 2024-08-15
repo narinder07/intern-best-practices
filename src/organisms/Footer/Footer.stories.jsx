@@ -29,4 +29,11 @@ FooterSection.args = {
   email: "narindersingh00690@gmail.com",
   phone: "+919115955017",
   location: "69 street India",
+  copyrightSpan1: "My React Project",
+  copyrightSpan2: "Narinder",
+  copyrightText1: " All right reserved.",
+  copyrightText2: " Designed By ",
+  copyrightText3: " By Using ",
+  copyrightText4: "React and Bootstrap",
+  copyrightSpanStyle: "span-text",
 };
