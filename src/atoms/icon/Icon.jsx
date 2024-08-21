@@ -7,7 +7,7 @@ const Icon = (props) => {
   const iconName = props.iconName;
   // Convert iconName to match the format used in FontAwesome icon library
   const iconKey = `fa${iconName.charAt(0).toUpperCase() + iconName.slice(1)}`;
-  console.log("iconKey:", iconKey);
+  // console.log("iconKey:", iconKey);
 
   // Combine Icons and BrandsIcons using the spread operator
   const fullIcons = { ...Icons, ...BrandsIcons };

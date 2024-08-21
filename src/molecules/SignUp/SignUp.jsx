@@ -4,7 +4,7 @@ import Buttons from "../../atoms/buttons/Buttons";
 
 const SignUp = (props) => {
   return (
-    <div className="signUp">
+    <div className="input-field">
       <div className="input-field-mail">
         <InputField placeholder={props.placeholder} type={props.type} />
       </div>

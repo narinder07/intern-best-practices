@@ -1,21 +1,21 @@
-.signUp {
+.input-field {
   position: relative;
-}
-
-.signUp .button-mail {
-  position: absolute;
-  top: 7px;
-  left: 217px;
+  width: 350px;
 }
 .input-field-mail input {
   height: 50px;
-  width: 300px;
+  width: 100%;
+  border: none;
+  outline: none;
   padding-left: 10px;
 }
 .button-mail button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
   background-color: #00bcd4;
   border: none;
-  padding: 6px 10px;
+  padding: 6px 12px;
   color: white;
   transition: 0.4s ease;
 }

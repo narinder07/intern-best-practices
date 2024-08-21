@@ -9,6 +9,8 @@ import "./HeroSlider.css";
 import { Navigation, Autoplay } from "swiper/modules";
 
 const HeroSlider = (props) => {
+  const heroSliderProps = props.props;
+
   return (
     <>
       <Swiper
@@ -21,7 +23,7 @@ const HeroSlider = (props) => {
         modules={[Navigation, Autoplay, EffectFade]}
         style={{ "--swiper-navigation-color": "#fff" }}
       >
-        {props.imageSlides.map((sliderImg, sliderIndex) => (
+        {heroSliderProps.imageSlides.map((sliderImg, sliderIndex) => (
           <SwiperSlide key={sliderIndex}>
             <div className=" slider-image">
               <img
