@@ -1,5 +1,5 @@
-import SectionsImages from "./SectionsImages";
-import AboutSectionImg1 from "../../assets/about_section_img.jpg";
+import SectionsImages from "../SectionsImages/SectionsImages";
+import AboutSectionImg1 from "../../assets/about_section_img1.jpg";
 
 export default {
   title: "Organisms/SectionsImages",
