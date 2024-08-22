@@ -3,7 +3,7 @@ import "./InputField.css";
 const InputField = (props) => {
   return (
     <input
-      // className="input-custom"
+      className="form-control"
       type={props.text}
       placeholder={props.placeholder}
     />

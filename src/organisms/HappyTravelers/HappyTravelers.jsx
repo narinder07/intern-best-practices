@@ -6,8 +6,8 @@ const HappyTravelers = (props) => {
       <div className="container ">
         <div className="row text-center">
           <div className="col-12 travel-heading ">
-            <h1>{props.travelHeading}</h1>
-            <p>{props.travelPara}</p>
+            <h1 className="text-white">{props.travelHeading}</h1>
+            <p className="text-white">{props.travelPara}</p>
           </div>
         </div>
         <div className="row text-center">

@@ -58,7 +58,7 @@ const HomePage = () => {
     ],
   };
 
-  const HappyTravelersProps = {
+  const happyTravelersProps = {
     travelHeading: "Our Success",
     travelPara:
       "When preparing to travel, lay out all your clothes and all your money. Then take half the clothes and twice the money",
@@ -87,7 +87,7 @@ const HomePage = () => {
       <HeroSlider {...heroSliderProps}></HeroSlider>
       <AboutInfo {...aboutInfoProps}></AboutInfo>
       <RecentTrips {...recentTripsProps}></RecentTrips>
-      <HappyTravelers {...HappyTravelersProps}></HappyTravelers>
+      <HappyTravelers {...happyTravelersProps}></HappyTravelers>
     </CommonTemplate>
   );
 };

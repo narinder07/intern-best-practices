@@ -1,0 +1,39 @@
+.social-bg-color li a svg,
+.social-media-icons li a svg {
+  background-color: #00bcd4;
+  color: white;
+  padding: 15px 15px;
+  border-radius: 50%;
+}
+.social-bg-color li,
+.social-media-icons li {
+  list-style: none;
+  font-size: 18px;
+}
+.social-bg-color li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.social-bg-color {
+  margin-bottom: 20px;
+}
+.form-titles {
+  margin-bottom: 30px;
+}
+.form-content h3 {
+  color: #00bcd4;
+}
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 45px;
+}
+.social-media-icons li a svg {
+  transition: 0.4s;
+}
+.social-media-icons li a svg:hover {
+  background-color: #021016;
+  color: #00bcd4;
+}

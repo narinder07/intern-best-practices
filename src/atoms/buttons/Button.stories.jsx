@@ -12,3 +12,10 @@ ReadMoreButton.args = {
   type: "button",
   className: "sign-up",
 };
+
+export const SubmitButton = Template.bind({});
+SubmitButton.args = {
+  label: "Submit",
+  type: "button",
+  className: "submit-btn",
+};
