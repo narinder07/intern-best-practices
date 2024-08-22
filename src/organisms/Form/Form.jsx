@@ -5,7 +5,7 @@ import Button from "../../atoms/buttons/Buttons";
 
 const Form = (props) => {
   return (
-    <div className="container">
+    <div className="container section-padding">
       <div className="row align-items-center">
         <div className="col-lg-6">
           <div className="form-content">
@@ -15,7 +15,7 @@ const Form = (props) => {
             <div className="social-links">
               <div className="social-bg-color">
                 <Icon
-                  liClass="me-3"
+                  liClass="me-4"
                   class="social-icon"
                   iconName="envelope"
                   label={props.email}
@@ -23,7 +23,7 @@ const Form = (props) => {
               </div>
               <div className="social-bg-color">
                 <Icon
-                  liClass="me-3"
+                  liClass="me-4"
                   class="social-icon"
                   iconName="phone"
                   label={props.phone}
@@ -31,7 +31,7 @@ const Form = (props) => {
               </div>
               <div className="social-bg-color">
                 <Icon
-                  liClass="me-3"
+                  liClass="me-4"
                   class="social-icon"
                   iconName="map"
                   label={props.location}
@@ -70,28 +70,28 @@ const Form = (props) => {
           <div className="bg-light p-5">
             <form>
               <div className="row ">
-                <div className="col-lg-6 gy-4">
+                <div className="col-lg-6 g-4">
                   <FormField
                     label="First Name"
                     placeholder="Enter Your First Name"
                     type="text"
                   ></FormField>
                 </div>
-                <div className="col-lg-6 gy-4">
+                <div className="col-lg-6 g-4">
                   <FormField
                     label="Last Name"
                     placeholder="Enter Your Last Name"
                     type="text"
                   ></FormField>
                 </div>
-                <div className="col-lg-6 gy-4">
+                <div className="col-lg-6 g-4">
                   <FormField
                     label="Phone Number"
                     placeholder="Enter Your Phone Number "
                     type="text"
                   ></FormField>
                 </div>
-                <div className="col-lg-6 gy-4">
+                <div className="col-lg-6 g-4">
                   <FormField
                     label="Email Address"
                     placeholder="Enter Your Email Address"
