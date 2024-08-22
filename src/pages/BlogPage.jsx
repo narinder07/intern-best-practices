@@ -3,6 +3,8 @@ import recentTrip1 from "../assets/recent_trip1.png";
 import recentTrip2 from "../assets/recent_trip2.png";
 import recentTrip3 from "../assets/recent_trip3.png";
 import { RecentTrips } from "../organisms/RecentTrips/RecentTrips";
+import SectionsImages from "../organisms/SectionsImages/SectionsImages";
+import AboutSectionImg2 from "../assets/about_section_img2.jpg";
 
 const BlogPage = () => {
   const recentTripsProps = {
@@ -28,9 +30,15 @@ const BlogPage = () => {
       },
     ],
   };
+  const sectionImagesProps = {
+    mainText: "Blog",
+    mainImg: AboutSectionImg2,
+    alt: "About us Image",
+  };
 
   return (
     <CommonTemplate>
+      <SectionsImages {...sectionImagesProps}></SectionsImages>
       <RecentTrips {...recentTripsProps}></RecentTrips>
     </CommonTemplate>
   );
