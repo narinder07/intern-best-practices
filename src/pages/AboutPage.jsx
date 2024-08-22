@@ -1,8 +1,8 @@
 import CommonTemplate from "../templates/common/CommonTemplate";
 import AboutInfo from "../organisms/AboutInfo/AboutInfo";
 import aboutImg from "../assets/about-img.png";
-import SectionsImages from "../organisms/SectionsImages/SectionsImages";
-import AboutSectionImg1 from "../assets/about_section_img1.jpg";
+import HeaderLinksImages from "../organisms/HeaderLinksImages/HeaderLinksImages";
+import sectionImg2 from "../assets/section_img2.jpg";
 
 const AboutPage = () => {
   const aboutInfoProps = {
@@ -12,15 +12,15 @@ const AboutPage = () => {
     image: aboutImg,
     alt: "About us image",
   };
-  const sectionImagesProps = {
+  const headerImagesProps = {
     mainText: "About Us",
-    mainImg: AboutSectionImg1,
+    mainImg: sectionImg2,
     alt: "About us Image",
   };
 
   return (
     <CommonTemplate>
-      <SectionsImages {...sectionImagesProps}></SectionsImages>
+      <HeaderLinksImages {...headerImagesProps}></HeaderLinksImages>
       <AboutInfo {...aboutInfoProps}></AboutInfo>
     </CommonTemplate>
   );

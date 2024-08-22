@@ -1,16 +1,16 @@
 import CommonTemplate from "../templates/common/CommonTemplate";
-import SectionsImages from "../organisms/SectionsImages/SectionsImages";
-import AboutSectionImg4 from "../assets/about_section_img4.jpg";
+import HeaderLinksImages from "../organisms/HeaderLinksImages/HeaderLinksImages";
+import sectionImg4 from "../assets/section_img4.jpg";
 
 const ServicesPage = () => {
-  const sectionImagesProps = {
+  const headerImagesProps = {
     mainText: "Services",
-    mainImg: AboutSectionImg4,
+    mainImg: sectionImg4,
     alt: "About us Image",
   };
   return (
     <CommonTemplate>
-      <SectionsImages {...sectionImagesProps}></SectionsImages>
+      <HeaderLinksImages {...headerImagesProps}></HeaderLinksImages>
     </CommonTemplate>
   );
 };

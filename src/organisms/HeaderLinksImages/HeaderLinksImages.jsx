@@ -1,6 +1,6 @@
-import "./SectionsImages.css";
+import "./HeaderLinksImages.css";
 
-const SectionsImages = (props) => {
+const HeaderLinksImages = (props) => {
   return (
     <section>
       <div className="sections-img">
@@ -11,4 +11,4 @@ const SectionsImages = (props) => {
   );
 };
 
-export default SectionsImages;
+export default HeaderLinksImages;

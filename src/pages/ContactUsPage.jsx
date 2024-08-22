@@ -1,7 +1,7 @@
 import CommonTemplate from "../templates/common/CommonTemplate";
 import Form from "../organisms/Form/Form";
-import SectionsImages from "../organisms/SectionsImages/SectionsImages";
-import AboutSectionImg3 from "../assets/about_section_img3.jpg";
+import HeaderLinksImages from "../organisms/HeaderLinksImages/HeaderLinksImages";
+import sectionImg3 from "../assets/section_img3.jpg";
 
 const ContactUsPage = () => {
   const formProps = {
@@ -16,14 +16,14 @@ const ContactUsPage = () => {
     linkedin: "https://x.com/?lang=en&mx=2",
     twitter: "http://twitter.com",
   };
-  const sectionImagesProps = {
+  const headerImagesProps = {
     mainText: "Contact Us",
-    mainImg: AboutSectionImg3,
+    mainImg: sectionImg3,
     alt: "About us Image",
   };
   return (
     <CommonTemplate>
-      <SectionsImages {...sectionImagesProps}></SectionsImages>
+      <HeaderLinksImages {...headerImagesProps}></HeaderLinksImages>
       <Form {...formProps}></Form>
     </CommonTemplate>
   );

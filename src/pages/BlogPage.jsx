@@ -3,9 +3,8 @@ import recentTrip1 from "../assets/recent_trip1.png";
 import recentTrip2 from "../assets/recent_trip2.png";
 import recentTrip3 from "../assets/recent_trip3.png";
 import { RecentTrips } from "../organisms/RecentTrips/RecentTrips";
-import SectionsImages from "../organisms/SectionsImages/SectionsImages";
-import AboutSectionImg2 from "../assets/about_section_img2.jpg";
-
+import HeaderLinksImages from "../organisms/HeaderLinksImages/HeaderLinksImages";
+import sectionImg2 from "../assets/section_img2.jpg";
 const BlogPage = () => {
   const recentTripsProps = {
     tripLabel: "Recent Trips",
@@ -30,15 +29,15 @@ const BlogPage = () => {
       },
     ],
   };
-  const sectionImagesProps = {
+  const headerImagesProps = {
     mainText: "Blog",
-    mainImg: AboutSectionImg2,
+    mainImg: sectionImg2,
     alt: "About us Image",
   };
 
   return (
     <CommonTemplate>
-      <SectionsImages {...sectionImagesProps}></SectionsImages>
+      <HeaderLinksImages {...headerImagesProps}></HeaderLinksImages>
       <RecentTrips {...recentTripsProps}></RecentTrips>
     </CommonTemplate>
   );
