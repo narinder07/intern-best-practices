@@ -1,17 +1,15 @@
 import "./RecentTrips.css";
 
 export const RecentTrips = (props) => {
-  const recentTripsProps = props.props;
-
   return (
     <section>
       <div className="container section-padding">
         <div className="row">
           <div className="col-lg-12 text-center trip-title">
-            <h1>{recentTripsProps.tripLabel}</h1>
+            <h1>{props.tripLabel}</h1>
           </div>
           <div className="row">
-            {recentTripsProps.tripDetails.map((recentTrip, tripIndex) => (
+            {props.tripDetails.map((recentTrip, tripIndex) => (
               <div className="col-lg-4 col-md-6 recent-trip" key={tripIndex}>
                 <div className="trip-image mb-2">
                   <img src={recentTrip.tripImg} alt={recentTrip.alt} />

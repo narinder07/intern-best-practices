@@ -13,7 +13,7 @@ const AboutPage = () => {
 
   return (
     <CommonTemplate>
-      <AboutInfo props={aboutInfoProps}></AboutInfo>
+      <AboutInfo {...aboutInfoProps}></AboutInfo>
     </CommonTemplate>
   );
 };

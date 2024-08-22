@@ -10,6 +10,6 @@ const Template = (args) => <Logo {...args}></Logo>;
 export const WebLogo = Template.bind({});
 WebLogo.args = {
   label: "ReactProject",
-  href: "#",
+  href: "/",
   labelStyle: "logo-style",
 };

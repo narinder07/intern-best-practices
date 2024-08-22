@@ -2,8 +2,6 @@ import "./TopNavbar.css";
 import Icon from "../../atoms/icon/Icon";
 
 const TopNavbar = (props) => {
-  const topNavBarProps = props.props;
-
   return (
     <nav className="top-navbar">
       <div className="connect-right">
@@ -11,14 +9,14 @@ const TopNavbar = (props) => {
           liClass="me-3"
           class="social-icon"
           iconName="envelope"
-          label={topNavBarProps.email}
+          label={props.email}
         ></Icon>
         <Icon
           liClass="me-3"
           class="social-icon"
           iconName="phone"
-          label={topNavBarProps.phone}
-          href={topNavBarProps.href}
+          label={props.phone}
+          href={props.href}
         ></Icon>
       </div>
       <div className="connect-left">
@@ -26,25 +24,25 @@ const TopNavbar = (props) => {
           liClass="me-3"
           class="social-icon"
           iconName="instagram"
-          href={topNavBarProps.instagram}
+          href={props.instagram}
         ></Icon>
         <Icon
           liClass="me-3"
           class="social-icon"
           iconName="facebook"
-          href={topNavBarProps.facebook}
+          href={props.facebook}
         ></Icon>
         <Icon
           liClass="me-3"
           class="social-icon"
           iconName="linkedin"
-          href={topNavBarProps.linkedin}
+          href={props.linkedin}
         ></Icon>
         <Icon
           liClass="me-3"
           class="social-icon"
           iconName="twitter"
-          href={topNavBarProps.twitter}
+          href={props.twitter}
         ></Icon>
       </div>
     </nav>

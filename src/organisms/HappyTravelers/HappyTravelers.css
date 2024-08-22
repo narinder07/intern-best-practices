@@ -1,0 +1,39 @@
+.happy-traveler-bg {
+  background-image: linear-gradient(
+      rgba(71, 79, 79, 0.331),
+      rgba(57, 87, 90, 0.447)
+    ),
+    url(../../assets/happy_traveler.jpg);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+}
+.travel-heading p,
+h1 {
+  color: white;
+}
+.travel-details span {
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #00bcd4;
+}
+.travel-details {
+  margin-top: 60px;
+}
+.travel-details p {
+  margin-top: 25px;
+  letter-spacing: 3px;
+  color: white;
+}
+.travel-heading p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}

@@ -5,8 +5,12 @@ const UnOrderList = (props) => {
   return (
     <ul className={props.classes}>
       {props.menuItems &&
-        props.menuItems.map((item) => (
-          <ListItem href={item.link} key={item.key} name={item.name}></ListItem>
+        props.menuItems.map((navLinks, linksIndex) => (
+          <ListItem
+            key={linksIndex}
+            href={navLinks.href}
+            name={navLinks.name}
+          ></ListItem>
         ))}
     </ul>
   );

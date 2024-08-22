@@ -11,13 +11,11 @@ export const MenuLinks = Template.bind({});
 MenuLinks.args = {
   menuItems: [
     {
-      href: "#",
-      key: "home",
+      href: "/",
       name: "Home",
     },
     {
-      href: "#",
-      key: "about",
+      href: "/about",
       name: "About",
     },
   ],

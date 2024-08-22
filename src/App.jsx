@@ -7,13 +7,16 @@ const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
-    <Router>
-      {!isAuthenticated ? (
-        <BeforeLoginRoutes onLogin={() => setIsAuthenticated(true)} />
-      ) : (
-        <AfterLoginRoutes />
-      )}
-    </Router>
+    <>
+      <Router>
+        {!isAuthenticated ? (
+          <BeforeLoginRoutes onLogin={() => setIsAuthenticated(true)} />
+        ) : (
+          <AfterLoginRoutes />
+        )}
+      </Router>
+      {/* <RouterProvider router={router} /> */}
+    </>
   );
 };
 
