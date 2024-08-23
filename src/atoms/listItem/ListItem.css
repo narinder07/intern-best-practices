@@ -1,0 +1,12 @@
+.nav-links {
+  display: flex;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 17px;
+}
+.nav-links li {
+  list-style: none;
+}

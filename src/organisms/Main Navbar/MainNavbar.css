@@ -1,0 +1,26 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 7%;
+  background-color: #f9f8f6;
+}
+
+.main-nav .nav-links {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 18px !important;
+  color: #021016;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.nav-links li a:hover {
+  color: #00bcd4 !important;
+}

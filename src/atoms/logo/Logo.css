@@ -1,0 +1,11 @@
+.logo-style {
+  color: #3cbeee;
+  font-size: 34px;
+  transition: 0.4s;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+}
+.logo-style:hover {
+  color: #1fa9dbdd;
+}

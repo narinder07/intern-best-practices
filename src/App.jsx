@@ -1,15 +1,21 @@
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Contact from "./components/Contact/Contact";
+import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import BeforeLoginRoutes from "./routes/BeforeLoginRoutes";
+import AfterLoginRoutes from "./routes/AfterLoginRoutes";
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Contact />
-      <Footer />
+      <Router>
+        {!isAuthenticated ? (
+          <BeforeLoginRoutes onLogin={() => setIsAuthenticated(true)} />
+        ) : (
+          <AfterLoginRoutes />
+        )}
+      </Router>
+      {/* <RouterProvider router={router} /> */}
     </>
   );
 };
