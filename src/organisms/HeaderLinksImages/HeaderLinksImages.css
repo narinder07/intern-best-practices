@@ -14,3 +14,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.sections-img h1 {
+  font-weight: 600;
+  letter-spacing: 4px;
+}

@@ -39,3 +39,6 @@
   background-color: #021016;
   color: #00bcd4;
 }
+input:focus {
+  border: none;
+}

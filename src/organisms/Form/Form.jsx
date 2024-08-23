@@ -69,7 +69,7 @@ const Form = (props) => {
         <div className="col-lg-6">
           <div className="bg-light p-5">
             <form>
-              <div className="row ">
+              <div className="row">
                 <div className="col-lg-6 g-4">
                   <FormField
                     label="First Name"
@@ -88,14 +88,14 @@ const Form = (props) => {
                   <FormField
                     label="Phone Number"
                     placeholder="Enter Your Phone Number "
-                    type="text"
+                    type="number"
                   ></FormField>
                 </div>
                 <div className="col-lg-6 g-4">
                   <FormField
                     label="Email Address"
                     placeholder="Enter Your Email Address"
-                    type="text"
+                    type="email"
                   ></FormField>
                 </div>
               </div>

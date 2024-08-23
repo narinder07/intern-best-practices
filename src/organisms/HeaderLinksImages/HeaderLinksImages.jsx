@@ -5,7 +5,7 @@ const HeaderLinksImages = (props) => {
     <section>
       <div className="sections-img">
         <img src={props.mainImg} alt={props.alt} />
-        <h1 className="text-white">{props.mainText}</h1>
+        <h1 className="text-white display-4">{props.mainText}</h1>
       </div>
     </section>
   );

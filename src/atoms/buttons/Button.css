@@ -16,3 +16,15 @@
 .submit-btn:hover {
   background-color: #021016;
 }
+.schedule-trip {
+  background-color: #021016;
+  padding: 10px 28px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: 0.4s;
+}
+.schedule-trip:hover {
+  background-color: #3cbeee;
+  color: white;
+}

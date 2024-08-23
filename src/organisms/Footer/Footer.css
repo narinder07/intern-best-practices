@@ -51,3 +51,6 @@
 .copyright-footer {
   background-color: #021016;
 }
+input:focus {
+  border: none;
+}

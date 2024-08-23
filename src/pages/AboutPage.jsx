@@ -2,7 +2,7 @@ import CommonTemplate from "../templates/common/CommonTemplate";
 import AboutInfo from "../organisms/AboutInfo/AboutInfo";
 import aboutImg from "../assets/about-img.png";
 import HeaderLinksImages from "../organisms/HeaderLinksImages/HeaderLinksImages";
-import sectionImg2 from "../assets/section_img2.jpg";
+import sectionImg1 from "../assets/section_img1.jpg";
 
 const AboutPage = () => {
   const aboutInfoProps = {
@@ -14,7 +14,7 @@ const AboutPage = () => {
   };
   const headerImagesProps = {
     mainText: "About Us",
-    mainImg: sectionImg2,
+    mainImg: sectionImg1,
     alt: "About us Image",
   };
 

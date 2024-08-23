@@ -19,3 +19,17 @@ SubmitButton.args = {
   type: "button",
   className: "submit-btn",
 };
+
+export const SignUpButton = Template.bind({});
+SignUpButton.args = {
+  label: "Register",
+  type: "button",
+  className: "schedule-trip",
+};
+
+export const LogInButton = Template.bind({});
+LogInButton.args = {
+  label: "Login",
+  type: "button",
+  className: "schedule-trip",
+};
