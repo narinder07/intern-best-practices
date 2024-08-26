@@ -1,7 +1,27 @@
-.container {
-  display: flex;
-  align-items: center;
+.signUp-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 35px;
+  width: 500px;
+  border-radius: 10px;
+}
+.form-field input {
   width: 100%;
-  height: 70vh;
-  justify-content: center;
+  height: 30px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+}
+.form-field {
+  margin-bottom: 15px;
+}
+.form-field label {
+  color: white;
+}
+.schedule-trip {
+  width: 100%;
+  margin-top: 20px;
 }

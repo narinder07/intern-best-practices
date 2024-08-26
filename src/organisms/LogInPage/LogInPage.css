@@ -1,3 +1,28 @@
-.container .schedule-trip {
-  margin-top: 40px;
+.login-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 60px;
+  width: 480px;
+  border-radius: 10px;
+}
+.form-field input {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.login-wrapper label {
+  color: white;
+}
+.login-wrapper .schedule-trip {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-field {
+  margin-bottom: 15px;
 }
