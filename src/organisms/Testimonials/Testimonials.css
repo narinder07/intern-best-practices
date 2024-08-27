@@ -1,0 +1,31 @@
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  background-color: #00bcd4;
+  color: black;
+  padding: 8px 14px;
+  font-size: 22px;
+  border-radius: 50%;
+}
+.travel-img img {
+  width: 100%;
+  height: 100%;
+}
+.travel-img {
+  position: relative;
+}
+.personInfo {
+  position: absolute;
+  bottom: 0;
+  transition: 0.4s ease;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  opacity: 0;
+}
+.travel-img:hover .personInfo {
+  opacity: 1;
+}
+.personInfo h1,
+p {
+  color: #00bcd4;
+  text-align: center;
+}
