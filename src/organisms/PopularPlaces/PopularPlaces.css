@@ -1,0 +1,50 @@
+.placesTitle {
+  display: flex;
+  align-items: center;
+}
+.placesInformation img {
+  width: 100%;
+}
+.places {
+  text-align: center;
+}
+.places p {
+  font-size: 19px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.placesTitle a {
+  text-decoration: none;
+  background-color: #00bcd4;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-left: 10px;
+  transition: 0.4s;
+}
+.placesInformation:hover a {
+  background-color: #021016b4;
+  color: white;
+}
+.placesInformation {
+  transition: 0.4s ease-in-out;
+}
+.placesInformation:hover {
+  transform: translateY(5px);
+}
+.placesTitle h4 {
+  color: white;
+  font-weight: 500;
+}
+.placesInformation {
+  position: relative;
+}
+.placesInformation .placesTitle {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 20px;
+}

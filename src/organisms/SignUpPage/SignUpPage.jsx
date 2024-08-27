@@ -7,6 +7,7 @@ const SignUpPage = (props) => {
     <div className="signUp-wrapper">
       <h2 className="text-white mb-3 text-center">{props.formCaption}</h2>
       <form>
+        {/* <FormField label="Upload your file" type="file"></FormField> */}
         <FormField
           label="First Name"
           placeholder="Enter Your First Name"

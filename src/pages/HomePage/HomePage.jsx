@@ -1,14 +1,14 @@
-import CommonTemplate from "../templates/common/CommonTemplate";
-import HeroSlider from "../organisms/HeroSlider/HeroSlider";
-import heroImg1 from "../assets/nature_img1.jpg";
-import heroImg2 from "../assets/nature_img2.jpg";
-import AboutInfo from "../organisms/AboutInfo/AboutInfo";
-import aboutImg from "../assets/about-img.png";
-import { RecentTrips } from "../organisms/RecentTrips/RecentTrips";
-import recentTrip1 from "../assets/recent_trip1.png";
-import recentTrip2 from "../assets/recent_trip2.png";
-import recentTrip3 from "../assets/recent_trip3.png";
-import HappyTravelers from "../organisms/HappyTravelers/HappyTravelers";
+import CommonTemplate from "../../templates/common/CommonTemplate";
+import HeroSlider from "../../organisms/HeroSlider/HeroSlider";
+import heroImg1 from "../../assets/nature_img1.jpg";
+import heroImg2 from "../../assets/nature_img2.jpg";
+import AboutInfo from "../../organisms/AboutInfo/AboutInfo";
+import aboutImg from "../../assets/about-img.png";
+import { RecentTrips } from "../../organisms/RecentTrips/RecentTrips";
+import recentTrip1 from "../../assets/recent_trip1.png";
+import recentTrip2 from "../../assets/recent_trip2.png";
+import recentTrip3 from "../../assets/recent_trip3.png";
+import HappyTravelers from "../../organisms/HappyTravelers/HappyTravelers";
 
 const HomePage = () => {
   const heroSliderProps = {

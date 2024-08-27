@@ -15,7 +15,6 @@ const App = () => {
           <AfterLoginRoutes />
         )}
       </Router>
-      {/* <RouterProvider router={router} /> */}
     </>
   );
 };
