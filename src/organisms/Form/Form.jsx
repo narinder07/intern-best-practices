@@ -11,7 +11,6 @@ const Form = (props) => {
           <div className="form-content">
             <h3 className="mb-3">{props.formHeading}</h3>
             <h1 className="mb-3">{props.formTitle}</h1>
-            <p className="mb-5">{props.formPara}</p>
             <div className="social-links">
               <div className="social-bg-color">
                 <Icon

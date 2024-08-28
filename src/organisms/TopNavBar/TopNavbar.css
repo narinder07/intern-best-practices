@@ -44,3 +44,12 @@
 .top-navbar p {
   color: #fff;
 }
+
+@media (max-width: 959px) {
+  .top-navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+}

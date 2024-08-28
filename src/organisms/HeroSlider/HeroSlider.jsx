@@ -30,7 +30,7 @@ const HeroSlider = (props) => {
                 alt={sliderImg.alt}
               />
               <div className="slider-title text-center">
-                <h1 className="display-4 text-white">{sliderImg.label}</h1>
+                <h1 className="display-2 text-white">{sliderImg.label}</h1>
               </div>
             </div>
           </SwiperSlide>
