@@ -6,7 +6,11 @@ const FormField = (props) => {
   return (
     <div className="form-field">
       <InputLabel {...props}></InputLabel>
-      <InputField type={props.type} placeholder={props.placeholder} />
+      <InputField
+        name={props.name}
+        type={props.type}
+        placeholder={props.placeholder}
+      />
     </div>
   );
 };

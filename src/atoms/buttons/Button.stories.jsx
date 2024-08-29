@@ -10,7 +10,7 @@ export const ReadMoreButton = Template.bind({});
 ReadMoreButton.args = {
   label: "Sign Up",
   type: "button",
-  className: "sign-up",
+  className: "submit",
 };
 
 export const SubmitButton = Template.bind({});
