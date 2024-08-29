@@ -11,6 +11,6 @@ export const CreateSignUpForm = Template.bind({});
 
 CreateSignUpForm.args = {
   formCaption: "Sign Up",
-  haveAccount: "Already have an account",
+  haveAccount: "Already have an account?",
   loginHere: "Login Here",
 };

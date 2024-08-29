@@ -24,5 +24,5 @@ export const LogInButton = Template.bind({});
 LogInButton.args = {
   label: "Login",
   type: "button",
-  className: "schedule-trip",
+  className: "login-btn",
 };

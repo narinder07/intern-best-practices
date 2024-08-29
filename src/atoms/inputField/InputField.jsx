@@ -1,8 +1,9 @@
 import "./InputField.css";
+import { Field } from "formik";
 
 const InputField = (props) => {
   return (
-    <input
+    <Field
       name={props.name}
       type={props.text}
       placeholder={props.placeholder}
