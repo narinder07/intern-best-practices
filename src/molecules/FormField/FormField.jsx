@@ -4,9 +4,13 @@ import InputField from "../../atoms/inputField/InputField";
 
 const FormField = (props) => {
   return (
-    <div>
+    <div className="form-field">
       <InputLabel {...props}></InputLabel>
-      <InputField {...props} />
+      <InputField
+        name={props.name}
+        type={props.type}
+        placeholder={props.placeholder}
+      />
     </div>
   );
 };

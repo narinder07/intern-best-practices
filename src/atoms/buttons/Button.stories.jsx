@@ -10,7 +10,7 @@ export const ReadMoreButton = Template.bind({});
 ReadMoreButton.args = {
   label: "Sign Up",
   type: "button",
-  className: "sign-up",
+  className: "submit",
 };
 
 export const SubmitButton = Template.bind({});
@@ -20,16 +20,9 @@ SubmitButton.args = {
   className: "submit-btn",
 };
 
-export const SignUpButton = Template.bind({});
-SignUpButton.args = {
-  label: "Register",
-  type: "button",
-  className: "schedule-trip",
-};
-
 export const LogInButton = Template.bind({});
 LogInButton.args = {
   label: "Login",
   type: "button",
-  className: "schedule-trip",
+  className: "login-btn",
 };

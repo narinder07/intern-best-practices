@@ -8,9 +8,9 @@
 }
 
 .main-nav .nav-links {
-  display: flex;
   align-items: center;
   margin-top: 15px;
+  padding: 0;
 }
 
 .nav-links li a {
@@ -23,4 +23,10 @@
 }
 .nav-links li a:hover {
   color: #00bcd4 !important;
+}
+.button .sign-up {
+  padding: 10px 20px;
+}
+.button .sign-up:hover {
+  background-color: #021016;
 }

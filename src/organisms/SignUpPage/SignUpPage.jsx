@@ -1,69 +1,77 @@
 import "./SignUpPage.css";
 import FormField from "../../molecules/FormField/FormField";
 import Buttons from "../../atoms/buttons/Buttons";
+import { Formik, Form, ErrorMessage } from "formik";
+import * as yup from "yup";
 
 const SignUpPage = (props) => {
+  const defaultFormValues = {
+    name: "",
+    email: "",
+    password: "",
+    setPassword: "",
+  };
+
+  const formValidation = yup.object().shape({
+    name: yup
+      .string()
+      .required("Please enter your name")
+      .min(2, "Name must be at least 2 characters long"),
+  });
+
+  const formHandle = (values) => {
+    console.log("form values", values);
+  };
+
   return (
-    <form>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 mb-3">
-            <h1>{props.formCaption}</h1>
-          </div>
-          <div className="row">
-            <div className="col-lg-6 g-4">
-              <FormField
-                label="First Name  "
-                placeholder="Enter Your First Name"
-                type="text"
-              ></FormField>
-            </div>
-            <div className="col-lg-6 g-4">
-              <FormField
-                label="Last Name  "
-                placeholder="Enter Your Last Name"
-                type="text"
-              ></FormField>
-            </div>
-            <div className="col-lg-6 g-4">
-              <FormField
-                label="Email Address"
-                placeholder="Enter Your Email "
-                type="email"
-              ></FormField>
-            </div>
-            <div className="col-lg-6 g-4">
-              <FormField
-                label="Phone Number"
-                placeholder="Enter Your Phone Number "
-                type="number"
-              ></FormField>
-            </div>
-            <div className="col-lg-6 g-4">
-              <FormField
-                label="Password"
-                placeholder="Enter Your Password "
-                type="password"
-              ></FormField>
-            </div>
-            <div className="col-lg-6 g-4">
-              <FormField
-                label="Confirm Password"
-                placeholder="Enter Your Confirm Password "
-                type="password"
-              ></FormField>
-            </div>
-          </div>
-          <div className="col-lg-12 g-4">
+    <section className="form-bg-img section-padding">
+      <div className="signUp-wrapper">
+        <h1>{props.formCaption}</h1>
+        <Formik
+          initialValues={defaultFormValues}
+          validationSchema={formValidation}
+          onSubmit={formHandle}
+        >
+          <Form>
+            <FormField
+              label="Your Name"
+              placeholder="Enter Your Name"
+              type="text"
+              name="name"
+            ></FormField>
+            <span className="text-danger">
+              <ErrorMessage name="name" />
+            </span>
+            <FormField
+              label="Email Address"
+              placeholder="Enter Your Email Address"
+              type="email"
+              name="email"
+            ></FormField>
+            <FormField
+              label="Password"
+              placeholder="Enter Your Password"
+              type="password"
+              name="password"
+            ></FormField>
+            <FormField
+              label="Confirm Password"
+              placeholder="Enter Your Confirm Password"
+              type="password"
+              name="setPassword"
+            ></FormField>
             <Buttons
-              label="Register"
-              type="button"
-              className="schedule-trip"
+              label="Sign Up"
+              type="submit"
+              className="sign-up"
             ></Buttons>
-          </div>
-        </div>
+            <p className="text-white mt-3">
+              {props.haveAccount} <a href="#">{props.loginHere}</a>
+            </p>
+          </Form>
+        </Formik>
       </div>
-    </form>
+    </section>
   );
 };
 

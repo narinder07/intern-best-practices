@@ -35,7 +35,7 @@
   color: #00bcd4;
   font-size: 25px;
   transition: 0.4s;
-  margin-right: 0.5rem !important;
+  margin-right: 10px !important;
 }
 .social-icon:hover {
   transform: scale(1.2);
@@ -43,4 +43,13 @@
 
 .top-navbar p {
   color: #fff;
+}
+
+@media (max-width: 959px) {
+  .top-navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
 }

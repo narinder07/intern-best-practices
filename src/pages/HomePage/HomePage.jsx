@@ -1,14 +1,19 @@
-import CommonTemplate from "../templates/common/CommonTemplate";
-import HeroSlider from "../organisms/HeroSlider/HeroSlider";
-import heroImg1 from "../assets/nature_img1.jpg";
-import heroImg2 from "../assets/nature_img2.jpg";
-import AboutInfo from "../organisms/AboutInfo/AboutInfo";
-import aboutImg from "../assets/about-img.png";
-import { RecentTrips } from "../organisms/RecentTrips/RecentTrips";
-import recentTrip1 from "../assets/recent_trip1.png";
-import recentTrip2 from "../assets/recent_trip2.png";
-import recentTrip3 from "../assets/recent_trip3.png";
-import HappyTravelers from "../organisms/HappyTravelers/HappyTravelers";
+import CommonTemplate from "../../templates/common/CommonTemplate";
+import HeroSlider from "../../organisms/HeroSlider/HeroSlider";
+import heroImg1 from "../../assets/nature_img1.jpg";
+import heroImg2 from "../../assets/nature_img2.jpg";
+import AboutInfo from "../../organisms/AboutInfo/AboutInfo";
+import aboutImg from "../../assets/about-img.png";
+import { RecentTrips } from "../../organisms/RecentTrips/RecentTrips";
+import recentTrip1 from "../../assets/recent_trip1.png";
+import recentTrip2 from "../../assets/recent_trip2.png";
+import recentTrip3 from "../../assets/recent_trip3.png";
+import HappyTravelers from "../../organisms/HappyTravelers/HappyTravelers";
+import Testimonials from "../../organisms/Testimonials/Testimonials";
+import traveImg1 from "../../assets/dest4.jpg";
+import traveImg2 from "../../assets/dest5.jpg";
+import traveImg3 from "../../assets/dest6.jpg";
+import TravelWithUs from "../../organisms/TravelWithUs/TravelWithUs";
 
 const HomePage = () => {
   const heroSliderProps = {
@@ -82,12 +87,54 @@ const HomePage = () => {
     ],
   };
 
+  const testimonialsProps = {
+    testimonialsDetails: [
+      {
+        images: traveImg1,
+        travel: "Jonathan",
+        review: "This is an amazing product!",
+      },
+      {
+        images: traveImg2,
+        travel: "Vicky",
+        review: "Amazing  Experience",
+      },
+      {
+        images: traveImg3,
+        travel: "Andrew",
+        review: "Absolutely love it!",
+      },
+      {
+        images: traveImg1,
+        travel: "Alex",
+        review: "This is an amazing product!",
+      },
+      {
+        images: traveImg2,
+        travel: "Dove",
+        review: "Amazing  Experience",
+      },
+      {
+        images: traveImg3,
+        travel: "Rachel",
+        review: "Absolutely love it!",
+      },
+    ],
+  };
+
+  const travelWithUsProps = {
+    TravelCaption: "Want To Travel With Us?",
+    bookNow: "Book Now",
+  };
+
   return (
     <CommonTemplate>
       <HeroSlider {...heroSliderProps}></HeroSlider>
       <AboutInfo {...aboutInfoProps}></AboutInfo>
       <RecentTrips {...recentTripsProps}></RecentTrips>
       <HappyTravelers {...happyTravelersProps}></HappyTravelers>
+      <Testimonials {...testimonialsProps}></Testimonials>
+      <TravelWithUs {...travelWithUsProps}></TravelWithUs>
     </CommonTemplate>
   );
 };

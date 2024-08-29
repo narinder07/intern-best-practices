@@ -1,10 +1,11 @@
 import "./InputField.css";
+import { Field } from "formik";
 
 const InputField = (props) => {
   return (
-    <input
-      className="form-control"
-      type={props.text}
+    <Field
+      name={props.name}
+      type={props.type}
       placeholder={props.placeholder}
     />
   );
