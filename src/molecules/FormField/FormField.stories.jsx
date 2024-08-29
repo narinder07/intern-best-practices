@@ -13,4 +13,5 @@ InputField.args = {
   label: "First Name  ",
   placeholder: "Enter Your Name",
   type: "text",
+  name: "first name",
 };

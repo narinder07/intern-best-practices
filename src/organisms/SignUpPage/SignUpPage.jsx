@@ -4,47 +4,41 @@ import Buttons from "../../atoms/buttons/Buttons";
 
 const SignUpPage = (props) => {
   return (
-    <div className="signUp-wrapper">
-      <h2 className="text-white mb-3 text-center">{props.formCaption}</h2>
-      <form>
-        {/* <FormField label="Upload your file" type="file"></FormField> */}
-        <FormField
-          label="First Name"
-          placeholder="Enter Your First Name"
-          type="text"
-        ></FormField>
-        <FormField
-          label="Last Name"
-          placeholder="Enter Your Last Name"
-          type="text"
-        ></FormField>
-        <FormField
-          label="Email Address"
-          placeholder="Enter Your Email Address"
-          type="email"
-        ></FormField>
-        <FormField
-          label="Phone Number"
-          placeholder="Enter Your Phone Number"
-          type="number"
-        ></FormField>
-        <FormField
-          label="Password"
-          placeholder="Enter Your Password"
-          type="password"
-        ></FormField>
-        <FormField
-          label="Confirm Password"
-          placeholder="Enter Your Confirm Password"
-          type="password"
-        ></FormField>
-        <Buttons
-          label="Register"
-          type="button"
-          className="schedule-trip"
-        ></Buttons>
-      </form>
-    </div>
+    <section className="form-bg-img section-padding">
+      <div className="signUp-wrapper">
+        <h1>{props.formCaption}</h1>
+        <form>
+          <FormField
+            label="Your Name"
+            placeholder="Enter Your Name"
+            type="text"
+            name="yourName"
+          ></FormField>
+          <FormField
+            label="Email Address"
+            placeholder="Enter Your Email Address"
+            type="email"
+            name="email"
+          ></FormField>
+          <FormField
+            label="Password"
+            placeholder="Enter Your Password"
+            type="password"
+            name="password"
+          ></FormField>
+          <FormField
+            label="Confirm Password"
+            placeholder="Enter Your Confirm Password"
+            type="password"
+            name="setPassword"
+          ></FormField>
+          <Buttons label="Sign Up" type="button" className="sign-up"></Buttons>
+          <p className="text-white mt-3">
+            {props.haveAccount} <a href="#">{props.loginHere}</a>
+          </p>
+        </form>
+      </div>
+    </section>
   );
 };
 

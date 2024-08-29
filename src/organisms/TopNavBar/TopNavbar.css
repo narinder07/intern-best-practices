@@ -35,7 +35,7 @@
   color: #00bcd4;
   font-size: 25px;
   transition: 0.4s;
-  margin-right: 0.5rem !important;
+  margin-right: 10px !important;
 }
 .social-icon:hover {
   transform: scale(1.2);
