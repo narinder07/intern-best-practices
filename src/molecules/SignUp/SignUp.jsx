@@ -6,7 +6,11 @@ const SignUp = (props) => {
   return (
     <div className="input-field">
       <div className="input-field-mail">
-        <InputField placeholder={props.placeholder} type={props.type} />
+        <InputField
+          name={props.name}
+          placeholder={props.placeholder}
+          type={props.type}
+        />
       </div>
       <div className="button-mail">
         <Buttons label={props.buttonText} />
