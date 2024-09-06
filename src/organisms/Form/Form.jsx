@@ -74,6 +74,7 @@ const Form = (props) => {
                     label="First Name"
                     placeholder="Enter Your First Name"
                     type="text"
+                    name="firstName"
                   ></FormField>
                 </div>
                 <div className="col-lg-6 g-4">
@@ -81,13 +82,15 @@ const Form = (props) => {
                     label="Last Name"
                     placeholder="Enter Your Last Name"
                     type="text"
+                    name="lastName"
                   ></FormField>
                 </div>
                 <div className="col-lg-6 g-4">
                   <FormField
                     label="Phone Number"
                     placeholder="Enter Your Phone Number "
-                    type="number"
+                    type="text"
+                    name="phone"
                   ></FormField>
                 </div>
                 <div className="col-lg-6 g-4">
@@ -95,6 +98,7 @@ const Form = (props) => {
                     label="Email Address"
                     placeholder="Enter Your Email Address"
                     type="email"
+                    name="email"
                   ></FormField>
                 </div>
               </div>

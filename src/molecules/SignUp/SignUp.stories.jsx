@@ -11,5 +11,6 @@ export const SignForm = Template.bind({});
 SignForm.args = {
   buttonText: "Sign Up",
   placeholder: "Enter Your Email",
-  type: "text",
+  type: "email",
+  name: "email",
 };

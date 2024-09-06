@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
-import AboutPage from "../pages/AboutPage";
-import BlogPage from "../pages/BlogPage";
-import ServicesPage from "../pages/ServicesPage";
-import ContactUsPage from "../pages/ContactUsPage";
+import AboutPage from "../pages/AboutPage/AboutPage";
+import BlogPage from "../pages/BlogPage/BlogPage";
+import ServicesPage from "../pages/ServicesPage/ServicesPage";
+import ContactUsPage from "../pages/ContactUsPage/ContactUsPage";
 
 const BeforeLoginRoutes = () => {
   return (

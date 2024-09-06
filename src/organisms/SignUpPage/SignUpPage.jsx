@@ -1,36 +1,41 @@
 import "./SignUpPage.css";
 import FormField from "../../molecules/FormField/FormField";
 import Buttons from "../../atoms/buttons/Buttons";
-import { Formik, Form, ErrorMessage } from "formik";
-import * as yup from "yup";
+import { Form, Formik, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const SignUpPage = (props) => {
-  const defaultFormValues = {
+  const defaultFieldsValue = {
     name: "",
     email: "",
     password: "",
     setPassword: "",
   };
 
-  const formValidation = yup.object().shape({
-    name: yup
-      .string()
+  const formValidation = Yup.object().shape({
+    name: Yup.string()
       .required("Please enter your name")
-      .min(2, "Name must be at least 2 characters long"),
+      .min(3, "Name length must be 3 characters")
+      .matches(/^[A-Za-z\s]*$/, "Please enter valid characters"),
+    email: Yup.string()
+      .required("Please enter your email")
+      .email("Please enter a valid email "),
+    password: Yup.string()
+      .required("Please enter your password")
+      .min(8, "Password must be at least 8 characters")
+      .max(17, "Password cannot be more than 17 characters"),
+    setPassword: Yup.string()
+      .required("Please enter your confirm password")
+      .oneOf([Yup.ref("password"), null], "Password not match"),
   });
-
-  const formHandle = (values) => {
-    console.log("form values", values);
-  };
 
   return (
     <section className="form-bg-img section-padding">
       <div className="signUp-wrapper">
         <h1>{props.formCaption}</h1>
         <Formik
-          initialValues={defaultFormValues}
+          initialValues={defaultFieldsValue}
           validationSchema={formValidation}
-          onSubmit={formHandle}
         >
           <Form>
             <FormField
@@ -48,18 +53,27 @@ const SignUpPage = (props) => {
               type="email"
               name="email"
             ></FormField>
+            <span className="text-danger">
+              <ErrorMessage name="email" />
+            </span>
             <FormField
               label="Password"
               placeholder="Enter Your Password"
               type="password"
               name="password"
             ></FormField>
+            <span className="text-danger">
+              <ErrorMessage name="password" />
+            </span>
             <FormField
               label="Confirm Password"
               placeholder="Enter Your Confirm Password"
               type="password"
               name="setPassword"
             ></FormField>
+            <span className="text-danger">
+              <ErrorMessage name="setPassword" />
+            </span>
             <Buttons
               label="Sign Up"
               type="submit"

@@ -1,22 +1,19 @@
-import CommonTemplate from "../templates/common/CommonTemplate";
-import HeaderLinksImages from "../organisms/HeaderLinksImages/HeaderLinksImages";
-import sectionImg4 from "../assets/section_img4.jpg";
-import PopularPlaces from "../organisms/PopularPlaces/PopularPlaces";
-import india from "../assets/india.png";
-import italy from "../assets/italy.png";
-import brazil from "../assets/brazil.png";
-import america from "../assets/america.png";
-import maldives from "../assets/maldives.png";
-import indonesia from "../assets/indonesia.png";
+import { createSlice } from "@reduxjs/toolkit";
+import sectionImg4 from "../../assets/section_img4.jpg";
+import india from "../../assets/india.png";
+import italy from "../../assets/italy.png";
+import brazil from "../../assets/brazil.png";
+import america from "../../assets/america.png";
+import maldives from "../../assets/maldives.png";
+import indonesia from "../../assets/indonesia.png";
 
-const ServicesPage = () => {
-  const headerImagesProps = {
+const initialState = {
+  headerImagesProps: {
     mainText: "Services",
     mainImg: sectionImg4,
     alt: "About us Image",
-  };
-
-  const popularPlacesProps = {
+  },
+  popularPlacesProps: {
     placesHeading: "Popular Destination",
     placesPara:
       "We live in a wonderful world that is full of beauty, charm and adventure. There is no end to the adventures we can have if only we seek them with our eyes open",
@@ -58,14 +55,20 @@ const ServicesPage = () => {
         alt: "Places images",
       },
     ],
-  };
-
-  return (
-    <CommonTemplate>
-      <HeaderLinksImages {...headerImagesProps}></HeaderLinksImages>
-      <PopularPlaces {...popularPlacesProps}></PopularPlaces>
-    </CommonTemplate>
-  );
+  },
 };
 
-export default ServicesPage;
+export const servicesPageSlice = createSlice({
+  name: "servicesPage",
+  initialState,
+  reducers: {
+    headerImages: (state) => {
+      state.headerImagesProps;
+    },
+    popularPlaces: (state) => {
+      state.popularPlacesProps;
+    },
+  },
+});
+export const { headerImages, popularPlaces } = servicesPageSlice.actions;
+export default servicesPageSlice.reducer;
