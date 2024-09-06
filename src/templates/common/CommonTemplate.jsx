@@ -1,6 +1,6 @@
-import MainNavbar from "../../organisms/Main Navbar/MainNavbar";
-import TopNavbar from "../../organisms/TopNavBar/TopNavbar";
-import Footer from "../../organisms/Footer/Footer";
+import MainNavbar from "../../components/organisms/MainNavbar/MainNavbar";
+import TopNavbar from "../../components/organisms/TopNavBar/TopNavbar";
+import Footer from "../../components/organisms/Footer/Footer";
 import { useSelector } from "react-redux";
 
 const CommonTemplate = (props) => {

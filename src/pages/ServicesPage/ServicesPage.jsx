@@ -1,6 +1,6 @@
 import CommonTemplate from "../../templates/common/CommonTemplate";
-import HeaderLinksImages from "../../organisms/HeaderLinksImages/HeaderLinksImages";
-import PopularPlaces from "../../organisms/PopularPlaces/PopularPlaces";
+import HeaderLinksImages from "../../components/organisms/HeaderLinksImages/HeaderLinksImages";
+import PopularPlaces from "../../components/organisms/PopularPlaces/PopularPlaces";
 
 import { useSelector } from "react-redux";
 

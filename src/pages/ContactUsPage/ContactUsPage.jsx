@@ -1,6 +1,5 @@
 import CommonTemplate from "../../templates/common/CommonTemplate";
-import Form from "../../organisms/Form/Form";
-import HeaderLinksImages from "../../organisms/HeaderLinksImages/HeaderLinksImages";
+import HeaderLinksImages from "../../components/organisms/HeaderLinksImages/HeaderLinksImages";
 import { useSelector } from "react-redux";
 
 const ContactUsPage = () => {
@@ -8,12 +7,10 @@ const ContactUsPage = () => {
     (state) => state.contactUsPageReducer.headerImagesProps
   );
 
-  const form = useSelector((state) => state.contactUsPageReducer.formProps);
-
   return (
     <CommonTemplate>
       <HeaderLinksImages {...headerImages}></HeaderLinksImages>
-      <Form {...form}></Form>
+      {/* <Form {...form}></Form> */}
     </CommonTemplate>
   );
 };
