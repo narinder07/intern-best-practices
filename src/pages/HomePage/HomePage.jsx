@@ -1,10 +1,10 @@
 import CommonTemplate from "../../templates/common/CommonTemplate";
-import HeroSlider from "../../organisms/HeroSlider/HeroSlider";
-import AboutInfo from "../../organisms/AboutInfo/AboutInfo";
-import { RecentTrips } from "../../organisms/RecentTrips/RecentTrips";
-import HappyTravelers from "../../organisms/HappyTravelers/HappyTravelers";
-import Testimonials from "../../organisms/Testimonials/Testimonials";
-import TravelWithUs from "../../organisms/TravelWithUs/TravelWithUs";
+import HeroSlider from "../../components/organisms/HeroSlider/HeroSlider";
+import AboutInfo from "../../components/organisms/AboutInfo/AboutInfo";
+import { RecentTrips } from "../../components/organisms/RecentTrips/RecentTrips";
+import HappyTravelers from "../../components/organisms/HappyTravelers/HappyTravelers";
+import Testimonials from "../../components/organisms/Testimonials/Testimonials";
+import TravelWithUs from "../../components/organisms/TravelWithUs/TravelWithUs";
 import { useSelector } from "react-redux";
 
 const HomePage = () => {

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "https://dpxcode-travel-c1f8664525c9.herokuapp.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -19,6 +20,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "formik": "^2.4.6",
     "react": "^18.3.1",
@@ -47,6 +49,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-storybook": "^0.8.0",
+    "http-proxy-middleware": "^3.0.2",
     "prop-types": "^15.8.1",
     "storybook": "^8.2.5",
     "vite": "^5.3.1"

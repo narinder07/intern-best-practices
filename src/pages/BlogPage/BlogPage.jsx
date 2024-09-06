@@ -1,7 +1,6 @@
 import CommonTemplate from "../../templates/common/CommonTemplate";
-
-import { RecentTrips } from "../../organisms/RecentTrips/RecentTrips";
-import HeaderLinksImages from "../../organisms/HeaderLinksImages/HeaderLinksImages";
+import RecentTrips from "../../components/organisms/RecentTrips/RecentTrips";
+import HeaderLinksImages from "../../components/organisms/HeaderLinksImages/HeaderLinksImages";
 import { useSelector } from "react-redux";
 
 const BlogPage = () => {

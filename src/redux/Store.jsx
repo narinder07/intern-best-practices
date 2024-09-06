@@ -5,6 +5,7 @@ import blogPageReducer from "../pages/BlogPage/BlogPageSlice";
 import servicesPageReducer from "../pages/ServicesPage/ServicesPageSlice";
 import contactUsPageReducer from "../pages/ContactUsPage/ContactUsSlice";
 import commonTemplateReducer from "../templates/common/CommonTemplateSlice";
+import signUpFormSlice from "../pages/signUpPage/SignUpPageSlice";
 
 const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
     servicesPageReducer: servicesPageReducer,
     contactUsPageReducer: contactUsPageReducer,
     commonTemplateReducer: commonTemplateReducer,
+    signUpFormSlice: signUpFormSlice,
   },
 });
 
