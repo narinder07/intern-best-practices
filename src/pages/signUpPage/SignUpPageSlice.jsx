@@ -9,11 +9,10 @@ const initialState = {
     confirmPassword: "",
     photoUrl: "www.google.com",
   },
-  errors:{}
-  
+  errors: {},
 };
 
-export const signUpFormSlice = createSlice({
+const signUpFormSlice = createSlice({
   name: "signUpForm",
   initialState,
   reducers: {

@@ -27,5 +27,4 @@ const RecentTrips = (props) => {
   );
 };
 
-
 export default RecentTrips;

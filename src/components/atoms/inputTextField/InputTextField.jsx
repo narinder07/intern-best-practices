@@ -4,10 +4,9 @@ const InputTextField = (props) => {
   const { onChangeEvent } = props;
 
   const handleChange = (event) => {
-    if(onChangeEvent){
+    if (onChangeEvent) {
       onChangeEvent(event);
     }
-    
   };
 
   return (

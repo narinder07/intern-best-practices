@@ -7,11 +7,9 @@ const CommonTemplate = (props) => {
   const topNavBar = useSelector(
     (state) => state.commonTemplateReducer.topNavBarProps
   );
-
   const mainNavBar = useSelector(
     (state) => state.commonTemplateReducer.mainNavBarProps
   );
-
   const footer = useSelector(
     (state) => state.commonTemplateReducer.footerProps
   );

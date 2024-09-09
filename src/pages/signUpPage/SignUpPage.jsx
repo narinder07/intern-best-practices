@@ -1,4 +1,4 @@
-import "./SignUpPage.css";
+// import "./SignUpPage.css";
 import SignUpForm from "../../components/organisms/SignUpForm/SignUpForm";
 import { useSelector, useDispatch } from "react-redux";
 import { setFormValues, setSignUpErrors, setUserDetails } from "./SignUpPageSlice"; 
@@ -9,20 +9,21 @@ const SignUpPage = (props) => {
    
   const dispatch = useDispatch(); // Define the dispatch function
 
+  const dispatch = useDispatch(); // Define the dispatch function
 
-  const onSubmitHandle = async(e) => {
+  const onSubmitHandle = async (e) => {
     e.preventDefault();
     const result = await SubmitSignUpForm(formValues);
     if (result.errors) dispatch(setSignUpErrors({ errors: result.errors }));
     if(result.status === "success") dispatch(setUserDetails({ userDetails: result.data }));
     console.log("Form Submitted", result);
-  }
+  };
 
   const onChangeHandle = (e) => {
     const { name, value } = e.target;
-    dispatch(setFormValues({ formvalues: { [name]: value }}));
+    dispatch(setFormValues({ formValues: { [name]: value } }));
     console.log("handleChange SignUpPage", e.target.name, e.target.value);
-  }
+  };
 
   return (
     <section className="form-bg-img section-padding">
