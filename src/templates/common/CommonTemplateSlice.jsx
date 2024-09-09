@@ -27,6 +27,7 @@ const initialState = {
       {
         href: "/blog",
         name: "Blog",
+        isActive: true,
       },
       {
         href: "/services",
