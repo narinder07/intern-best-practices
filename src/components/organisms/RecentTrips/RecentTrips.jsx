@@ -1,6 +1,6 @@
 import "./RecentTrips.css";
 
-export const RecentTrips = (props) => {
+const RecentTrips = (props) => {
   return (
     <section>
       <div className="container section-padding">
@@ -26,3 +26,6 @@ export const RecentTrips = (props) => {
     </section>
   );
 };
+
+
+export default RecentTrips;
