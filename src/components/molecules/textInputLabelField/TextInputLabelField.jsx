@@ -19,7 +19,7 @@ const TextInputLabelField = (props) => {
         placeholder={props.placeholder}
         value={props.value}
         onChangeEvent={handleChange}
-        errors={props.error ? props.error : ""}
+        error={props.error ? props.error : ""}
       />
     </div>
   );

@@ -7,6 +7,7 @@ const initialState = {
     username: "",
     password: "",
     confirmPassword: "",
+    photoUrl: "www.google.com",
   },
   errors:{}
   
@@ -17,17 +18,19 @@ export const signUpFormSlice = createSlice({
   initialState,
   reducers: {
     setFormValues: (state, action) => {
-      Object.keys(action.payload).forEach((key) => {
-        if (action.payload[key] !== undefined) {
-          state.formValues[key] = action.payload[key];
-        }
-      });
+      state.formValues = {
+        ...state.formValues,
+        ...action.payload.formvalues,
+      };
     },
     setSignUpErrors: (state, action) => {
       state.errors = action.payload.errors;
     },
-  },
+    setUserDetails: (state, action) => {
+      state.userDetails = action.payload.userDetails;
+    },
+  }
 });
 
-export const { setFormValues, setSignUpErrors } = signUpFormSlice.actions;
+export const { setFormValues, setSignUpErrors, setUserDetails } = signUpFormSlice.actions;
 export default signUpFormSlice.reducer;
