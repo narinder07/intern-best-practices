@@ -19,7 +19,7 @@ const InputTextField = (props) => {
       id={props.name + props.name.split("").reverse().join("")}
       value={props.value}
       onChange={handleChange} />
-      <div className="error">{props.error ? props.error : ""}</div>
+      {props.error ? <div className="alert alert-danger custom-error">{props.error ? props.error : ""}</div> : "" }
     </>
   );
 };
