@@ -1,46 +1,64 @@
-import "./SignUpForm.css";
-import TextInputLabelField from "../../../molecules/textInputLabelField/TextInputLabelField";
-import Button from "../../atoms/button/Button";
+import TextInputLabelField from "../../../components/molecules/textInputLabelField/TextInputLabelField";
+import Button from "../../../components/atoms/button/Button";
 
-const SignUpForm = (props) => {
-  const { formInputValues, onSubmitHandle } = props;
-  console.log("formInputValues--------------", formInputValues);
+const SignUpForm = ({ defaultValues, onChangeEvent, onSubmitEvent, errors}) => {
+  const handleChange = (event) => {
+    if (onChangeEvent) {
+      onChangeEvent(event);
+    }
+  };
+  
+  console.log("errors", errors);
 
+
+   // Extract error message for a specific field
+   const getErrorMessage = (fieldName) => {
+    if (errors && errors[fieldName]) {
+      return errors[fieldName];
+    }
+    return "";
+  };
+  
   return (
     <div className="signUp-wrapper">
-      <h1>{props.formCaption}</h1>
+     
 
-      <form onSubmit={onSubmitHandle}>
+      <form onSubmit={onSubmitEvent}>
         <TextInputLabelField
           label="Display Name"
           placeholder="Enter your display name"
           name="displayName"
           value={
-            formInputValues !== undefined && formInputValues.displayName
-              ? formInputValues.displayName
+            defaultValues !== undefined && defaultValues.displayName
+              ? defaultValues.displayName
               : ""
           }
-        />
+          onChangeEvent={handleChange}
+          error={getErrorMessage("displayName")}  />
 
         <TextInputLabelField
           label="Username"
           placeholder="Enter your username"
           name="username"
           value={
-            formInputValues !== undefined && formInputValues.username
-              ? formInputValues.username
+            defaultValues !== undefined && defaultValues.username
+              ? defaultValues.username
               : ""
           }
+          onChangeEvent={handleChange}
+          error={getErrorMessage("username")}
         />
         <TextInputLabelField
           label="Email Address"
           placeholder="Enter your email address"
           name="email"
           value={
-            formInputValues !== undefined && formInputValues.email
-              ? formInputValues.email
+            defaultValues !== undefined && defaultValues.email
+              ? defaultValues.email
               : ""
           }
+          onChangeEvent={handleChange}
+          error={getErrorMessage("email")}
         />
 
         <TextInputLabelField
@@ -48,10 +66,12 @@ const SignUpForm = (props) => {
           placeholder="Enter your password"
           name="password"
           value={
-            formInputValues !== undefined && formInputValues.password
-              ? formInputValues.password
+            defaultValues !== undefined && defaultValues.password
+              ? defaultValues.password
               : ""
           }
+          onChangeEvent={handleChange}
+          error={getErrorMessage("password")}
         />
 
         <TextInputLabelField
@@ -59,13 +79,21 @@ const SignUpForm = (props) => {
           placeholder="Enter your confirm password"
           name="confirmPassword"
           value={
-            formInputValues !== undefined && formInputValues.confirmPassword
-              ? formInputValues.confirmPassword
+            defaultValues !== undefined && defaultValues.confirmPassword
+              ? defaultValues.confirmPassword
               : ""
           }
+          onChangeEvent={handleChange}
+          error={getErrorMessage("confirmPassword")}
         />
+       {getErrorMessage("exception") && (
+          <div className="exception-error alert alert-danger">
+            {getErrorMessage("exception")}
+          </div>
+        )}
 
         <Button label="Submit" className="primary" type="submit"></Button>
+        
       </form>
     </div>
   );

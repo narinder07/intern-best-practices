@@ -8,8 +8,9 @@
   background-size: cover;
   object-fit: cover;
 }
+
 .signUp-wrapper {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -24,24 +25,12 @@
   color: white;
   font-weight: 600;
 }
-.form-field input {
-  width: 100%;
-  height: 35px;
-  padding-left: 10px;
-  border-radius: 20px;
-  outline: none;
-  border: none;
-}
-.form-field {
-  margin-bottom: 10px;
-}
+
 .signUp-wrapper a {
   text-decoration: none;
   color: #00bcd4;
 }
-.form-field label {
-  color: white;
-}
+
 .signUp-wrapper .sign-up {
   width: 100%;
   margin-top: 10px;
