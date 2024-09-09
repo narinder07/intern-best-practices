@@ -19,7 +19,13 @@ const InputTextField = (props) => {
         value={props.value}
         onChange={handleChange}
       />
-      <div className="error">{props.error ? props.error : ""}</div>
+      {props.error ? (
+        <div className="alert alert-danger custom-error">
+          {props.error ? props.error : ""}
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

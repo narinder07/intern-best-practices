@@ -1,18 +1,26 @@
 // import "./SignUpPage.css";
 import SignUpForm from "../../components/organisms/SignUpForm/SignUpForm";
 import { useSelector, useDispatch } from "react-redux";
-import { setFormValues, setSignUpErrors } from "./SignUpPageSlice";
+import {
+  setFormValues,
+  setSignUpErrors,
+  setUserDetails,
+} from "./SignUpPageSlice";
 import SubmitSignUpForm from "../../services/SignUpPageServices";
 
 const SignUpPage = (props) => {
-  const { formValues, errors } = useSelector((state) => state.signUpFormSlice);
+  const { formValues, errors, userDetails } = useSelector(
+    (state) => state.signUpFormSlice
+  );
 
   const dispatch = useDispatch(); // Define the dispatch function
 
   const onSubmitHandle = async (e) => {
     e.preventDefault();
     const result = await SubmitSignUpForm(formValues);
-    dispatch(setSignUpErrors({ errors: result.errors }));
+    if (result.errors) dispatch(setSignUpErrors({ errors: result.errors }));
+    if (result.status === "success")
+      dispatch(setUserDetails({ userDetails: result.data }));
     console.log("Form Submitted", result);
   };
 
@@ -26,6 +34,13 @@ const SignUpPage = (props) => {
     <section className="form-bg-img section-padding">
       <div className="signUp-form-wrapper">
         <h1>{props.formCaption}</h1>
+        {userDetails && userDetails.token ? (
+          <div className="alert alert-success">
+            User {userDetails.displayName} created successfully
+          </div>
+        ) : (
+          ""
+        )}
         <SignUpForm
           defaultValues={formValues}
           onChangeEvent={onChangeHandle}

@@ -15,11 +15,10 @@ const SignUpForm = ({
     }
   };
 
-  console.log("errors", errors);
-
   // Extract error message for a specific field
   const getErrorMessage = (fieldName) => {
     if (errors && errors[fieldName]) {
+      console.log("errors", errors[fieldName]);
       return errors[fieldName];
     }
     return "";
