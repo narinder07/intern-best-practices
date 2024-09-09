@@ -1,17 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  displayName: "Durga Parshad",
-  email: "durgadp16@gmail.com",
-  username: "durgadp16",
-  password: "amit123",
-  confirmPassword: "amit123",
+  formValues: {
+    displayName: "",
+    email: "",
+    username: "",
+    password: "",
+    confirmPassword: "",
+  },
+  errors: {},
 };
 
 const signUpFormSlice = createSlice({
   name: "signUpForm",
   initialState,
-  reducers: {},
+  reducers: {
+    setFormValues: (state, action) => {
+      Object.keys(action.payload).forEach((key) => {
+        if (action.payload[key] !== undefined) {
+          state.formValues[key] = action.payload[key];
+        }
+      });
+    },
+    setSignUpErrors: (state, action) => {
+      state.errors = action.payload.errors;
+    },
+  },
 });
 
+export const { setFormValues, setSignUpErrors } = signUpFormSlice.actions;
 export default signUpFormSlice.reducer;
