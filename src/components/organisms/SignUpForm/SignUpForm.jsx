@@ -1,4 +1,3 @@
-import "./SignUpForm.css";
 import TextInputLabelField from "../../../molecules/textInputLabelField/TextInputLabelField";
 import Button from "../../atoms/button/Button";
 

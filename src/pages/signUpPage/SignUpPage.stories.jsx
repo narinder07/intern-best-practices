@@ -1,7 +1,7 @@
 import SignUpPage from "./SignUpPage";
 
 export default {
-  title: "Organisms/SignUpPage",
+  title: "Pages/SignUpPage",
   component: SignUpPage,
 };
 

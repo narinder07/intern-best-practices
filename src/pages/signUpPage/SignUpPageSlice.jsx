@@ -8,7 +8,7 @@ const initialState = {
   confirmPassword: "amit123",
 };
 
-export const signUpFormSlice = createSlice({
+const signUpFormSlice = createSlice({
   name: "signUpForm",
   initialState,
   reducers: {},
