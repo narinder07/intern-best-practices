@@ -1,19 +1,10 @@
-import { NavLink } from "react-router-dom";
 import "./ListItem.css";
 
 const ListItem = (props) => {
+  console.log("ListItem props :", props);
   return (
     <li>
-      <NavLink
-        to={props.href}
-        style={({ isActive }) => {
-          return {
-            color: isActive ? "#00bcd4" : "#021016",
-          };
-        }}
-      >
-        {props.name}
-      </NavLink>
+      <a href={props.href} className={props.isActive == true ? "menu-active" :"menu"}>{props.name}</a>
     </li>
   );
 };

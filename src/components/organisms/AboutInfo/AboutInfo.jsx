@@ -2,6 +2,7 @@ import "./AboutInfo.css";
 import Button from "../../atoms/button/Button";
 
 const AboutInfo = (props) => {
+  console.log("AboutInfo props :", props);
   return (
     <section>
       <div className="container section-padding">

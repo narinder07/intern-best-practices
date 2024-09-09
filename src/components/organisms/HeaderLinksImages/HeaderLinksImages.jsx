@@ -1,6 +1,7 @@
 import "./HeaderLinksImages.css";
 
 const HeaderLinksImages = (props) => {
+  console.log("HeaderLinksImages props :", props);
   return (
     <section>
       <div className="sections-img">
