@@ -12,14 +12,13 @@ const InputTextField = (props) => {
   return (
     <>
       <input
-        name={props.name}
-        type="text"
-        placeholder={props.placeholder}
-        id={props.name + props.name.split("").reverse().join("")}
-        value={props.value}
-        onChange={handleChange}
-      />
-      <div className="error">{props.error ? props.error : ""}</div>
+      name={props.name}
+      type="text"
+      placeholder={props.placeholder}
+      id={props.name + props.name.split("").reverse().join("")}
+      value={props.value}
+      onChange={handleChange} />
+      {props.error ? <div className="alert alert-danger custom-error">{props.error ? props.error : ""}</div> : "" }
     </>
   );
 };
