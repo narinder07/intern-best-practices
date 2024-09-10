@@ -1,9 +1,9 @@
 import "./Button.css";
 
-const Buttons = (props) => {
+const Buttons = ({ label, type, className, onClick }) => {
   return (
-    <button className={props.className} type={props.type}>
-      {props.label}
+    <button className={className} type={type} onClick={onClick}>
+      {label} 
     </button>
   );
 };
