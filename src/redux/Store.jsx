@@ -5,7 +5,7 @@ import blogPageReducer from "../pages/BlogPage/BlogPageSlice";
 import servicesPageReducer from "../pages/ServicesPage/ServicesPageSlice";
 import contactUsPageReducer from "../pages/ContactUsPage/ContactUsSlice";
 import commonTemplateReducer from "../templates/common/CommonTemplateSlice";
-import signUpFormSlice  from "../components/organisms/SignUpForm/SignUpFormSlice";
+import signUpFormSlice  from "../components/organisms/signUpForm/SignupFormSlice";
 import authSlice from "../redux/commonSlices/AuthSlice";
 
 const store = configureStore({
