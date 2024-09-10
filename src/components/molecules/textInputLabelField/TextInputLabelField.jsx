@@ -3,7 +3,7 @@ import Label from "../../atoms/label/Label";
 import InputTextField from "../../atoms/inputTextField/InputTextField";
 
 const TextInputLabelField = (props) => {
-  const { onChangeEvent } = props
+  const { onChangeEvent } = props;
 
   const handleChange = (event) => {
     if (onChangeEvent) {

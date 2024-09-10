@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -34,3 +35,5 @@ const signUpFormSlice = createSlice({
 export const { setFormValues, setSignUpErrors, setUserDetails } =
   signUpFormSlice.actions;
 export default signUpFormSlice.reducer;
+=======
+>>>>>>> fc6c0195026c75e062301b68b49c2d53e5edfcea

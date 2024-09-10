@@ -22,14 +22,7 @@ export const aboutPageSlice = createSlice({
   name: "aboutPage",
   initialState,
   reducers: {
-    aboutInfo: (state) => {
-      state.aboutInfoProps;
-    },
-    headerImages: (state) => {
-      state.headerImagesProps;
-    },
   },
 });
 
-export const { aboutInfo, headerImages } = aboutPageSlice.actions;
 export default aboutPageSlice.reducer;

@@ -7,10 +7,14 @@ const AboutPage = () => {
   const headerImages = useSelector(
     (state) => state.aboutPageReducer.headerImagesProps
   );
+  
+  console.log("headerImages :", headerImages);
 
   const aboutInfo = useSelector(
     (state) => state.aboutPageReducer.aboutInfoProps
   );
+
+  console.log("aboutInfo :", aboutInfo);
 
   return (
     <CommonTemplate>
