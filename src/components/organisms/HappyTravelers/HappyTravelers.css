@@ -3,7 +3,7 @@
       rgba(64, 94, 94, 0.486),
       rgba(57, 87, 90, 0.301)
     ),
-    url(../../assets/happy_traveler.jpg);
+    url("../../../assets/happy_traveler.jpg");
   width: 100%;
   height: 90vh;
   display: flex;

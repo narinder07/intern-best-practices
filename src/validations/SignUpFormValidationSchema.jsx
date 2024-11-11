@@ -1,7 +1,11 @@
 import * as Yup from "yup";
 
 export const SignUpValidationSchema = Yup.object().shape({
-  name: Yup.string()
+  displayName: Yup.string()
+    .required("Please enter your display name")
+    .min(3, "Name length must be 3 characters")
+    .matches(/^[A-Za-z\s]*$/, "Please enter valid characters"),
+  username: Yup.string()
     .required("Please enter your name")
     .min(3, "Name length must be 3 characters")
     .matches(/^[A-Za-z\s]*$/, "Please enter valid characters"),
@@ -11,8 +15,8 @@ export const SignUpValidationSchema = Yup.object().shape({
   password: Yup.string()
     .required("Please enter your password")
     .min(8, "Password must be at least 8 characters")
-    .max(17, "Password cannot be more than 17 characters"),
-  setPassword: Yup.string()
-    .required("Please enter your confirm password")
-    .oneOf([Yup.ref("password"), null], "Password not match"),
+    .max(14, "Password cannot be more than 14 characters"),
+  confirmPassword: Yup.string()
+    .required("Please enter your confirm Password")
+    .oneOf([Yup.ref("password"), null], "Passwords must match"),
 });

@@ -1,6 +1,5 @@
 import "./Footer.css";
 import Icon from "../../atoms/icon/Icon";
-import SignUp from "../../molecules/SignUp/SignUp";
 
 const Footer = (props) => {
   return (
@@ -50,11 +49,6 @@ const Footer = (props) => {
             </div>
             <div className="col-lg-3 col-md-6">
               <h3 className="mb-4 text-white">{props.label1}</h3>
-              <SignUp
-                buttonText="Sign Up"
-                placeholder="Enter Your Email"
-                type="text"
-              />
             </div>
           </div>
         </div>

@@ -4,8 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { EffectFade } from "swiper/modules";
 import "swiper/css/effect-fade";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css/pagination";
+import { Navigation, Autoplay } from "swiper/modules";
 import "./Testimonials.css";
 
 const Testimonials = (props) => {
@@ -20,7 +19,7 @@ const Testimonials = (props) => {
           spaceBetween={20}
           slidesPerView={3}
           autoplay={{ delay: 2500 }}
-          modules={[Navigation, Autoplay, Pagination, EffectFade]}
+          modules={[Navigation, Autoplay, EffectFade]}
           style={{ "--swiper-pagination-bullet-size": "15px" }}
         >
           {props.testimonialsDetails.map((userInfo, userIndex) => (

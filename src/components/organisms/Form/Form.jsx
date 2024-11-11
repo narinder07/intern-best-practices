@@ -1,7 +1,7 @@
 import "./Form.css";
 import Icon from "../../atoms/icon/Icon";
 import FormField from "../../molecules/FormField/FormField";
-import Button from "../../atoms/buttons/Buttons";
+import Button from "../../atoms/button/Button";
 
 const Form = (props) => {
   return (

@@ -1,26 +1,26 @@
-import "./LogInPage.css";
-import FormField from "../../molecules/FormField/FormField";
-import Buttons from "../../atoms/buttons/Buttons";
+import "./LogInForm.css";
+import TextInputLabelField from "../../molecules/textInputLabelField/TextInputLabelField";
+import Button from "../../atoms/button/Button";
 
-const LogInPage = (props) => {
+const LogInForm = (props) => {
   return (
     <div className="login-bg-img">
       <div className="login-wrapper">
         <h1>{props.formCaption}</h1>
-        <form>
-          <FormField
+        <form onSubmit={props.handleLogIn}>
+          <TextInputLabelField
             label="Email Address"
             placeholder="Enter Your Email Address"
             type="email"
             name="email"
-          ></FormField>
-          <FormField
+          ></TextInputLabelField>
+          <TextInputLabelField
             label="Password"
             placeholder="Enter Your Password"
             type="password"
             name="password"
-          ></FormField>
-          <Buttons label="Login" type="button" className="login-btn"></Buttons>
+          ></TextInputLabelField>
+          <Button label="Login" type="button" className="login-btn"></Button>
           <p className="mt-3 text-white">
             {props.noAccount} <a href="#">{props.signUpHere}</a>
           </p>
@@ -30,4 +30,4 @@ const LogInPage = (props) => {
   );
 };
 
-export default LogInPage;
+export default LogInForm;

@@ -1,11 +1,11 @@
-import LogInPage from "./LogInPage";
+import LogInForm from "./LogInForm";
 
 export default {
   title: "Organisms/LogInPage",
-  component: LogInPage,
+  component: LogInForm,
 };
 
-const Template = (args) => <LogInPage {...args}></LogInPage>;
+const Template = (args) => <LogInForm {...args}></LogInForm>;
 
 export const LogIN = Template.bind({});
 

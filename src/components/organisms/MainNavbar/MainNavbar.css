@@ -30,3 +30,6 @@
 .button .sign-up:hover {
   background-color: #021016;
 }
+.login-btn {
+  margin-left: 10px;
+}

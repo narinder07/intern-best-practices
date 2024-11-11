@@ -35,6 +35,7 @@ const SignUpForm = ({
               label="Display Name"
               placeholder="Enter your display name"
               name="displayName"
+              type="text"
               value={
                 defaultValues !== undefined && defaultValues.displayName
                   ? defaultValues.displayName
@@ -48,6 +49,7 @@ const SignUpForm = ({
               label="Username"
               placeholder="Enter your username"
               name="username"
+              type="text"
               value={
                 defaultValues !== undefined && defaultValues.username
                   ? defaultValues.username
@@ -70,9 +72,10 @@ const SignUpForm = ({
             />
 
             <TextInputLabelField
-              label="password"
+              label="Password"
               placeholder="Enter your password"
               name="password"
+              type="password"
               value={
                 defaultValues !== undefined && defaultValues.password
                   ? defaultValues.password
@@ -83,9 +86,10 @@ const SignUpForm = ({
             />
 
             <TextInputLabelField
-              label="confirmPassword"
+              label="Confirm Password"
               placeholder="Enter your confirm password"
               name="confirmPassword"
+              type="password"
               value={
                 defaultValues !== undefined && defaultValues.confirmPassword
                   ? defaultValues.confirmPassword
@@ -95,9 +99,9 @@ const SignUpForm = ({
               error={getErrorMessage("confirmPassword")}
             />
             {getErrorMessage("exception") && (
-              <div className="exception-error alert alert-danger">
+              <span className="exception-error text-danger">
                 {getErrorMessage("exception")}
-              </div>
+              </span>
             )}
 
             <Button label="Submit" className="primary" type="submit"></Button>

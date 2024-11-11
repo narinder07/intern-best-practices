@@ -11,4 +11,5 @@ export const Input1 = Template.bind({});
 Input1.args = {
   placeholder: "Enter Your Name",
   name: "name",
+  type: "text",
 };

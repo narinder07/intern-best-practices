@@ -3,7 +3,7 @@
       rgba(28, 27, 27, 0.215),
       rgba(0, 0, 0, 0.219)
     ),
-    url("../../assets/login_bg.jpg");
+    url("../../../assets/form_bg.jpg");
   width: 100%;
   height: 95vh;
   background-position: center;

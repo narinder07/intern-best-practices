@@ -1,7 +1,8 @@
-import { RecentTrips } from "./RecentTrips";
+import RecentTrips from "./RecentTrips";
 import recentTrip1 from "../../../assets/recent_trip1.png";
 import recentTrip2 from "../../../assets/recent_trip2.png";
 import recentTrip3 from "../../../assets/recent_trip3.png";
+
 export default {
   title: "Organisms/RecentTrips",
   component: RecentTrips,
