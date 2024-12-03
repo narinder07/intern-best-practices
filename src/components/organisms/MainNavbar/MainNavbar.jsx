@@ -7,11 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 const MainNavbar = (props) => {
   const { isAuthenticated } = useSelector((state) => state.authSlice);
+
   const navigate = useNavigate();
   const handleClick = (link) => {
     console.log("Button clicked, navigating to:", link);
     navigate(link);
   };
+
   return (
     <div className="main-nav sticky-top">
       <Logo {...props} />
@@ -32,7 +34,6 @@ const MainNavbar = (props) => {
             onClick={() => handleClick("/signup")}
           ></Button>
         )}
-        {/* <Button label="Log In" type="button" className="login-btn"></Button> */}
       </div>
     </div>
   );

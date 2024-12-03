@@ -43,16 +43,6 @@ const SignUpPage = () => {
     }
   };
 
-  // const onSubmitHandle = async (e) => {
-  //   e.preventDefault();
-  //   const result = await SubmitSignUpForm(formValues);
-  //   if (result.errors) dispatch(setSignUpErrors({ errors: result.errors }));
-  //   if (result.status === "success") {
-  //     dispatch(setUserData(result.data));
-  //     navigate("/dashboard");
-  //   }
-  // };
-
   const onChangeHandle = async (e) => {
     const { name, value } = e.target;
     dispatch(setFormValues({ formValues: { ...formValues, [name]: value } }));
@@ -63,19 +53,6 @@ const SignUpPage = () => {
       dispatch(setSignUpErrors({ errors: { [name]: error.message } }));
     }
   };
-
-  // const { name, value } = e.target;
-  // dispatch(setFormValues({ formValues: { [name]: value } }));
-  // dispatch(clearSignUpError({ name }));
-  // if (value.length === 0) {
-  //   alert("checking");
-  // }
-  // const { name, value } = e.target;
-  // if (!value) {
-  //   dispatch(setSignUpErrors({ errors: errors }));
-  // } else {
-  //   dispatch(clearSignUpError({ name }));
-  // }
 
   return (
     <section className="form-bg-img">
