@@ -2,7 +2,7 @@ import "./LogInForm.css";
 import TextInputLabelField from "../../molecules/textInputLabelField/TextInputLabelField";
 import Button from "../../atoms/button/Button";
 
-const LogInForm = ({ defaultValues, handleLogIn, onChangeEvent, errors }) => {
+const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
   const handleChange = (event) => {
     if (onChangeEvent) {
       onChangeEvent(event);
@@ -21,7 +21,7 @@ const LogInForm = ({ defaultValues, handleLogIn, onChangeEvent, errors }) => {
   return (
     <div className="login-bg-img">
       <div className="login-wrapper">
-        <form onSubmit={handleLogIn}>
+        <form onSubmit={onSubmitLogIn}>
           <TextInputLabelField
             label="Email Address"
             placeholder="Enter Your Email Address"

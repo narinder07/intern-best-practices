@@ -4,11 +4,21 @@
   align-items: center;
   position: relative;
 }
+.slider-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
 .slider-title {
   position: absolute;
   top: "50%";
   left: "50%";
   transform: "translate(-50%, -50%)";
+  z-index: 2;
 }
 
 .swiper-button-prev:after,

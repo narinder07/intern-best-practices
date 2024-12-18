@@ -9,6 +9,7 @@ const initialState = {
     instagram: "http://instagram.com",
     linkedin: "https://x.com/?lang=en&mx=2",
     twitter: "http://twitter.com",
+    gmailRef: "https://mail.google.com/",
   },
   mainNavBarProps: {
     label: "ReactProject",
@@ -19,23 +20,27 @@ const initialState = {
       {
         href: "/",
         name: "Home",
+        isActive: true,
       },
       {
         href: "/about",
         name: "About",
+        isActive: false,
       },
       {
         href: "/blog",
         name: "Blog",
-        isActive: true,
+        isActive: false,
       },
       {
         href: "/services",
         name: "Services",
+        isActive: false,
       },
       {
         href: "/contact",
         name: "Contact Us",
+        isActive: false,
       },
     ],
   },

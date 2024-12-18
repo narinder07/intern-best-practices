@@ -1,14 +1,14 @@
-import { useNavigate } from "react-router-dom";
 import SignUpForm from "../../components/organisms/signUpForm/SignUpForm";
+import SubmitSignUpForm from "../../services/SignUpPageServices";
 import { useSelector, useDispatch } from "react-redux";
+import { SignUpValidationSchema } from "../../validations/SignUpFormValidationSchema";
 import {
   setFormValues,
   setSignUpErrors,
   clearSignUpError,
 } from "../../components/organisms/signUpForm/SignUpFormSlice";
+import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../redux/commonSlices/AuthSlice";
-import SubmitSignUpForm from "../../services/SignUpPageServices";
-import { SignUpValidationSchema } from "../../validations/SignUpFormValidationSchema";
 
 const SignUpPage = () => {
   const formValues = useSelector((state) => state.signUpFormSlice.formValues);

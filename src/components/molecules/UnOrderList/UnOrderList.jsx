@@ -8,7 +8,6 @@ const UnOrderList = (props) => {
     console.error("menuItems prop is either undefined or not an array");
     return null;
   }
-
   console.log("menuItems :", menuItems);
   return (
     <ul className={classes}>

@@ -17,22 +17,27 @@ WebMainNavbar.args = {
     {
       href: "/",
       name: "Home",
+      isActive: true,
     },
     {
       href: "/about",
       name: "About",
+      isActive: false,
     },
     {
       href: "/blog",
       name: "Blog",
+      isActive: false,
     },
     {
       href: "/services",
       name: "Services",
+      isActive: false,
     },
     {
       href: "/contact",
       name: "Contact Us",
+      isActive: false,
     },
   ],
 };

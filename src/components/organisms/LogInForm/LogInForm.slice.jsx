@@ -2,25 +2,27 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   formValues: {
-    photoUrl: "www.noolapp.com",
+    // photoUrl: "www.noolapp.com",
+    email: "",
+    password: "",
   },
   errors: {},
 };
 
-const signUpFormSlice = createSlice({
-  name: "signUpFormSlice",
+const logInFormSlice = createSlice({
+  name: "logInFormSlice",
   initialState,
   reducers: {
-    setFormValues: (state, action) => {
+    setLoginFormValues: (state, action) => {
       state.formValues = {
         ...state.formValues,
         ...action.payload.formValues,
       };
     },
-    setSignUpErrors: (state, action) => {
+    setLoginFormErrors: (state, action) => {
       state.errors = action.payload.errors;
     },
-    clearSignUpError: (state, action) => {
+    clearLoginFormError: (state, action) => {
       const { name } = action.payload;
       state.errors = {
         ...state.errors,
@@ -30,6 +32,6 @@ const signUpFormSlice = createSlice({
   },
 });
 
-export const { setFormValues, setSignUpErrors, clearSignUpError } =
-  signUpFormSlice.actions;
-export default signUpFormSlice.reducer;
+export const { setLoginFormValues, setLoginFormErrors, clearLoginFormError } =
+  logInFormSlice.actions;
+export default logInFormSlice.reducer;

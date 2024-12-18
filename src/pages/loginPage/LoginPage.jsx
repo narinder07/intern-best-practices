@@ -1,19 +1,19 @@
 import LogInForm from "../../components/organisms/LogInForm/LogInForm";
 import submitLogInForm from "../../services/LogInPageServices";
 import { useSelector, useDispatch } from "react-redux";
-import { SignUpValidationSchema } from "../../validations/SignUpFormValidationSchema";
+import { LogInFormValidationSchema } from "../../validations/LogInFormValidationSchema";
 import {
-  setFormValues,
-  setSignUpErrors,
-  clearSignUpError,
-} from "../../components/organisms/signUpForm/SignUpFormSlice";
+  setLoginFormValues,
+  setLoginFormErrors,
+  clearLoginFormError,
+} from "../../components/organisms/LogInForm/LogInForm.slice";
 import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../redux/commonSlices/AuthSlice";
 
 const LoginPage = () => {
-  const formValues = useSelector((state) => state.signUpFormSlice.formValues);
-  const errors = useSelector((state) => state.signUpFormSlice.errors);
-  // const userDetails = useSelector((state) => state.authSlice.authData);
+  const formValues = useSelector((state) => state.logInFormSlice.formValues);
+  const errors = useSelector((state) => state.logInFormSlice.errors);
+  //  const userDetails = useSelector((state) => state.authSlice.authData);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,11 +21,13 @@ const LoginPage = () => {
   const handleLogIn = async (e) => {
     e.preventDefault();
     try {
-      await SignUpValidationSchema.validate(formValues, { abortEarly: false });
+      await LogInFormValidationSchema.validate(formValues, {
+        abortEarly: false,
+      });
       const result = await submitLogInForm(formValues);
 
       if (result.errors) {
-        dispatch(setSignUpErrors({ errors: result.errors }));
+        dispatch(setLoginFormErrors({ errors: result.errors }));
       } else if (result.status === "success") {
         dispatch(setUserData(result.data));
         navigate("/dashboard");
@@ -35,17 +37,20 @@ const LoginPage = () => {
       validationErrors.inner.forEach((error) => {
         formattedErrors[error.path] = error.message;
       });
+      dispatch(setLoginFormErrors({ errors: formattedErrors }));
     }
   };
 
   const onChangeHandle = async (e) => {
     const { name, value } = e.target;
-    dispatch(setFormValues({ formValues: { ...formValues, [name]: value } }));
+    dispatch(
+      setLoginFormValues({ formValues: { ...formValues, [name]: value } })
+    );
     try {
-      await SignUpValidationSchema.validateAt(name, { [name]: value });
-      dispatch(clearSignUpError({ name }));
+      await LogInFormValidationSchema.validateAt(name, { [name]: value });
+      dispatch(clearLoginFormError({ name }));
     } catch (error) {
-      dispatch(setSignUpErrors({ errors: { [name]: error.message } }));
+      dispatch(setLoginFormErrors({ errors: { [name]: error.message } }));
     }
   };
 
@@ -53,7 +58,7 @@ const LoginPage = () => {
     <div>
       <LogInForm
         defaultValues={formValues}
-        handleLogIn={handleLogIn}
+        onSubmitLogIn={handleLogIn}
         onChangeEvent={onChangeHandle}
         errors={errors}
       />

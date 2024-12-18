@@ -1,7 +1,7 @@
 import "./InputTextField.css";
 
 const InputTextField = (props) => {
-  const { onChangeEvent } = props;
+  const { onChangeEvent, error } = props;
 
   const handleChange = (event) => {
     if (onChangeEvent) {
@@ -15,6 +15,7 @@ const InputTextField = (props) => {
         name={props.name}
         type={props.type}
         placeholder={props.placeholder}
+        className={`${error ? "inputError" : ""}`}
         id={props.name + props.name.split("").reverse().join("")}
         value={props.value}
         onChange={handleChange}

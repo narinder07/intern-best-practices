@@ -47,8 +47,13 @@ const Footer = (props) => {
                 </li>
               ))}
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-3 col-md-6 footer-service-links">
               <h3 className="mb-4 text-white">{props.label1}</h3>
+              {props.quickLinks.map((links, linksIndex) => (
+                <li key={linksIndex}>
+                  <a href={links.href}>{links.text}</a>
+                </li>
+              ))}
             </div>
           </div>
         </div>

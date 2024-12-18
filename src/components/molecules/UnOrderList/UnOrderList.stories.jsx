@@ -13,10 +13,12 @@ MenuLinks.args = {
     {
       href: "/",
       name: "Home",
+      isActive: true,
     },
     {
       href: "/about",
       name: "About",
+      isActive: false,
     },
   ],
   classes: "nav-links",
