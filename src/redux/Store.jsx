@@ -5,9 +5,10 @@ import blogPageReducer from "../pages/BlogPage/BlogPageSlice";
 import servicesPageReducer from "../pages/ServicesPage/ServicesPageSlice";
 import contactUsPageReducer from "../pages/ContactUsPage/ContactUsSlice";
 import commonTemplateReducer from "../templates/common/CommonTemplateSlice";
-import signUpFormSlice from "../components/organisms/signUpForm/SignUpFormSlice";
-import logInFormSlice from "../components/organisms/LogInForm/LogInForm.slice";
+// import signUpFormSlice from "../components/organisms/signUpForm/SignUpFormSlice";
+// import logInFormSlice from "../components/organisms/LogInForm/LogInForm.slice";
 import authSlice from "../redux/commonSlices/AuthSlice";
+import formSlice from "../redux/formSlice";
 
 const store = configureStore({
   reducer: {
@@ -17,9 +18,10 @@ const store = configureStore({
     servicesPageReducer: servicesPageReducer,
     contactUsPageReducer: contactUsPageReducer,
     commonTemplateReducer: commonTemplateReducer,
-    signUpFormSlice: signUpFormSlice,
-    logInFormSlice: logInFormSlice,
+    // signUpFormSlice: signUpFormSlice,
+    // logInFormSlice: logInFormSlice,
     authSlice: authSlice,
+    formSlice: formSlice,
   },
 });
 

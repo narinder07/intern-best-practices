@@ -3,16 +3,24 @@ import submitLogInForm from "../../services/LogInPageServices";
 import { useSelector, useDispatch } from "react-redux";
 import { LogInFormValidationSchema } from "../../validations/LogInFormValidationSchema";
 import {
-  setLoginFormValues,
-  setLoginFormErrors,
-  clearLoginFormError,
-} from "../../components/organisms/LogInForm/LogInForm.slice";
+  setFormValues,
+  setFormErrors,
+  clearFormErrors,
+} from "../../redux/formSlice";
+// import {
+//   setLoginFormValues,
+//   setLoginFormErrors,
+//   clearLoginFormError,
+// } from "../../components/organisms/LogInForm/LogInForm.slice";
 import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../redux/commonSlices/AuthSlice";
 
 const LoginPage = () => {
-  const formValues = useSelector((state) => state.logInFormSlice.formValues);
-  const errors = useSelector((state) => state.logInFormSlice.errors);
+  const formValues = useSelector(
+    (state) => state.formSlice.logInForm.formValues
+  );
+  const errors = useSelector((state) => state.formSlice.logInForm.errors);
+
   //  const userDetails = useSelector((state) => state.authSlice.authData);
 
   const dispatch = useDispatch();
@@ -27,7 +35,9 @@ const LoginPage = () => {
       const result = await submitLogInForm(formValues);
 
       if (result.errors) {
-        dispatch(setLoginFormErrors({ errors: result.errors }));
+        dispatch(
+          setFormErrors({ formName: "logInForm", errors: result.errors })
+        );
       } else if (result.status === "success") {
         dispatch(setUserData(result.data));
         navigate("/dashboard");
@@ -37,20 +47,30 @@ const LoginPage = () => {
       validationErrors.inner.forEach((error) => {
         formattedErrors[error.path] = error.message;
       });
-      dispatch(setLoginFormErrors({ errors: formattedErrors }));
+      dispatch(
+        setFormErrors({ formName: "logInForm", errors: formattedErrors })
+      );
     }
   };
 
   const onChangeHandle = async (e) => {
     const { name, value } = e.target;
     dispatch(
-      setLoginFormValues({ formValues: { ...formValues, [name]: value } })
+      setFormValues({
+        formName: "logInForm",
+        formValues: { ...formValues, [name]: value },
+      })
     );
     try {
       await LogInFormValidationSchema.validateAt(name, { [name]: value });
-      dispatch(clearLoginFormError({ name }));
+      dispatch(clearFormErrors({ formName: "logInForm", name }));
     } catch (error) {
-      dispatch(setLoginFormErrors({ errors: { [name]: error.message } }));
+      dispatch(
+        setFormErrors({
+          formName: "logInForm",
+          errors: { [name]: error.message },
+        })
+      );
     }
   };
 
