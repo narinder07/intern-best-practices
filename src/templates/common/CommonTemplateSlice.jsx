@@ -18,27 +18,27 @@ const initialState = {
     classes: "nav-links",
     menuItems: [
       {
-        href: "/",
+        to: "/",
         name: "Home",
         isActive: true,
       },
       {
-        href: "/about",
+        to: "/about",
         name: "About",
         isActive: false,
       },
       {
-        href: "/blog",
+        to: "/blog",
         name: "Blog",
         isActive: false,
       },
       {
-        href: "/services",
+        to: "/services",
         name: "Services",
         isActive: false,
       },
       {
-        href: "/contact",
+        to: "/contact",
         name: "Contact Us",
         isActive: false,
       },
@@ -66,11 +66,11 @@ const initialState = {
     phone: "+919115955017",
     location: "69 street India",
     copyrightSpan1: "My React Project",
-    copyrightSpan2: "Travel",
+    copyrightSpan2: "Narinder",
     copyrightText1: " All right reserved.",
     copyrightText2: " Designed By ",
-    copyrightText3: " By Using ",
-    copyrightText4: "React and Bootstrap",
+    copyrightText3: " Using ",
+    copyrightText4: "React Bootstrap Redux Toolkit and StoryBook Atomic Design",
     copyrightSpanStyle: "span-text",
   },
 };

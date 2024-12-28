@@ -10,7 +10,6 @@ const ContactUsPage = () => {
   return (
     <CommonTemplate>
       <HeaderLinksImages {...headerImages}></HeaderLinksImages>
-      {/* <Form {...form}></Form> */}
     </CommonTemplate>
   );
 };

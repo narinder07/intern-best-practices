@@ -5,8 +5,35 @@
   justify-content: space-between;
   padding: 16px 7%;
   background-color: #f9f8f6;
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+.logo-style {
+  color: #3cbeee;
+  font-size: 34px;
+  transition: 0.4s;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+}
+.logo-style:hover {
+  color: #1fa9dbdd;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 17px;
+}
+.nav-links li {
+  list-style: none;
+}
 .main-nav .nav-links {
   align-items: center;
   margin-top: 15px;
@@ -31,4 +58,77 @@
 }
 .login-btn {
   margin-left: 10px;
+}
+.hamburger li a svg {
+  display: none;
+}
+/* 
+media query for mobile screen */
+
+@media screen and (max-width: 1200px) {
+  .main-nav {
+    padding: 16px 5%;
+  }
+  .logo-style {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-nav {
+    padding: 16px 2%;
+  }
+  .logo-style {
+    font-size: 28px;
+  }
+  .nav-links li a {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-style {
+    font-size: 28px;
+  }
+  .nav-links li a {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  .main-nav {
+    padding: 16px 0%;
+  }
+  .nav-links li {
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #f9f8f6;
+    width: 100%;
+    top: 59px;
+    height: 50%;
+    display: none;
+  }
+  .nav-links.active {
+    display: inline-block;
+  }
+  .button .sign-up {
+    padding: 6px 8px;
+    margin-right: 50px;
+    font-size: 15px;
+  }
+
+  .hamburger li a svg {
+    position: absolute;
+    right: 8px;
+    top: 22px;
+    display: inline-block;
+    color: #3cbeee;
+    font-size: 28px;
+    cursor: pointer;
+  }
 }

@@ -7,7 +7,7 @@ const TravelWithUs = (props) => {
         <div className="row">
           <div className="col-lg-12 travel-with-us ">
             <h1>{props.TravelCaption}</h1>
-            <a href="/contact">{props.bookNow}</a>
+            <a href="/signup">{props.bookNow}</a>
           </div>
         </div>
       </div>

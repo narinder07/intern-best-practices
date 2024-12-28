@@ -34,6 +34,6 @@ FooterSection.args = {
   copyrightText1: " All right reserved.",
   copyrightText2: " Designed By ",
   copyrightText3: " By Using ",
-  copyrightText4: "React and Bootstrap",
+  copyrightText4: "React Bootstrap Redux Toolkit and StoryBook Atomic Design",
   copyrightSpanStyle: "span-text",
 };
