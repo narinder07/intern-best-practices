@@ -9,7 +9,6 @@
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-
 .logo-style {
   color: #3cbeee;
   font-size: 34px;
@@ -21,11 +20,9 @@
 .logo-style:hover {
   color: #1fa9dbdd;
 }
-
 .nav-links {
   display: flex;
 }
-
 .nav-links li a {
   text-decoration: none;
   padding: 0 20px;
@@ -121,7 +118,6 @@ media query for mobile screen */
     margin-right: 50px;
     font-size: 15px;
   }
-
   .hamburger li a svg {
     position: absolute;
     right: 8px;

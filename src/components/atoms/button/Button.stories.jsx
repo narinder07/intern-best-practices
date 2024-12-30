@@ -26,3 +26,9 @@ LogInButton.args = {
   type: "button",
   className: "login-btn",
 };
+export const SendMessage = Template.bind({});
+SendMessage.args = {
+  label: "Send Message",
+  type: "button",
+  className: "message-btn",
+};
