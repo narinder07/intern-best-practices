@@ -54,8 +54,8 @@ const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
               {getErrorMessage("exception")}
             </span>
           )}
-
           <Button label="Login" type="submit" className="login-btn"></Button>
+          <p className="mt-3"></p>
         </form>
       </div>
     </div>

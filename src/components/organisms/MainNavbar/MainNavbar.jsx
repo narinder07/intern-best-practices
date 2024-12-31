@@ -46,6 +46,12 @@ const MainNavbar = (props) => {
               onClick={() => handleClick("/signup")}
             ></Button>
           )}
+          <Button
+            label="Log In"
+            type="button"
+            onClick={() => handleClick("/login")}
+            className="login-btn"
+          />
           <div className="hamburger">
             {showMenuLinks ? (
               <Icon
