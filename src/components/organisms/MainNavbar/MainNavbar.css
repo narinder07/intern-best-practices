@@ -139,5 +139,9 @@ media query for mobile screen */
     color: #3cbeee;
     font-size: 24px;
     cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .hamburger li a svg:hover {
+    color: #021016;
   }
 }

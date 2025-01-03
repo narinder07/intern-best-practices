@@ -40,7 +40,14 @@
   outline: none;
   width: 100%;
 }
-
+.form-field {
+  position: relative;
+}
+.icon-style li a svg {
+  position: absolute;
+  right: 8px;
+  top: 45px;
+}
 @media screen and (max-width: 768px) {
   .signUp-wrapper input {
     width: 95%;
@@ -58,5 +65,11 @@
     width: 95%;
     height: 28px;
     font-size: 14px;
+  }
+  .icon-style li a svg {
+    position: absolute;
+    right: 19px;
+    font-size: 11px;
+    top: 42px;
   }
 }

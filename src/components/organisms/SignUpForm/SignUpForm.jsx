@@ -75,6 +75,7 @@ const SignUpForm = ({
               placeholder="Enter your password"
               name="password"
               type="password"
+              formName="signUp"
               value={
                 defaultValues !== undefined && defaultValues.password
                   ? defaultValues.password
@@ -87,6 +88,7 @@ const SignUpForm = ({
             <TextInputLabelField
               label="Confirm Password"
               placeholder="Enter your confirm password"
+              formName="signUp"
               name="confirmPassword"
               type="password"
               value={

@@ -40,6 +40,7 @@ const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
             placeholder="Enter Your Password"
             type="password"
             name="password"
+            formName="logIn"
             onChangeEvent={handleChange}
             error={getErrorMessage("password")}
             value={
@@ -55,7 +56,6 @@ const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
             </span>
           )}
           <Button label="Login" type="submit" className="login-btn"></Button>
-          <p className="mt-3"></p>
         </form>
       </div>
     </div>

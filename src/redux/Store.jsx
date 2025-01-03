@@ -9,6 +9,7 @@ import commonTemplateReducer from "../templates/common/CommonTemplateSlice";
 // import logInFormSlice from "../components/organisms/LogInForm/LogInForm.slice";
 import authSlice from "../redux/commonSlices/AuthSlice";
 import formSlice from "../redux/formSlice";
+import toggleReducer from "../redux/ToggleSlice";
 
 const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ const store = configureStore({
     // logInFormSlice: logInFormSlice,
     authSlice: authSlice,
     formSlice: formSlice,
+    toggleReducer: toggleReducer,
   },
 });
 
