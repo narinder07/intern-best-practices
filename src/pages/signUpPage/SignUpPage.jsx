@@ -2,16 +2,11 @@ import SignUpForm from "../../components/organisms/signUpForm/SignUpForm";
 import SubmitSignUpForm from "../../services/SignUpPageServices";
 import { useSelector, useDispatch } from "react-redux";
 import { SignUpValidationSchema } from "../../validations/SignUpFormValidationSchema";
-// import {
-//   setFormValues,
-//   setSignUpErrors,
-//   clearSignUpError,
-// } from "../../components/organisms/signUpForm/SignUpFormSlice";
 import {
   setFormValues,
   setFormErrors,
   clearFormErrors,
-} from "../../redux/formSlice";
+} from "../../redux/FormSlice";
 import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../redux/commonSlices/AuthSlice";
 
