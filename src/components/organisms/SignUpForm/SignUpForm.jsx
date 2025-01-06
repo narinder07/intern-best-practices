@@ -7,6 +7,7 @@ const SignUpForm = ({
   onChangeEvent,
   onSubmitEvent,
   errors,
+  loading,
 }) => {
   ``;
   const handleChange = (event) => {
@@ -104,7 +105,17 @@ const SignUpForm = ({
               </span>
             )}
 
-            <Button label="Submit" className="primary" type="submit"></Button>
+            <Button
+              label={
+                loading ? (
+                  <span className="spinner-border text-white"></span>
+                ) : (
+                  "Submit"
+                )
+              }
+              className="primary"
+              type="submit"
+            ></Button>
           </form>
         </div>
       </div>

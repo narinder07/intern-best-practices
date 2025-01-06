@@ -32,3 +32,9 @@ SendMessage.args = {
   type: "button",
   className: "message-btn",
 };
+export const NotFoundPage = Template.bind({});
+NotFoundPage.args = {
+  label: "Go To Home",
+  type: "button",
+  className: "go-home",
+};
