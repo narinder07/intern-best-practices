@@ -1,0 +1,29 @@
+.travel-with-us {
+  text-align: center;
+}
+.travel-with-us h1 {
+  margin-bottom: 40px;
+}
+.travel-with-us a {
+  text-decoration: none;
+  background-color: #3cbeee;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+}
+.travel-with-us a:hover {
+  background-color: #021016;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .travel-with-us h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  .travel-with-us a {
+    padding: 8px 12px;
+  }
+}

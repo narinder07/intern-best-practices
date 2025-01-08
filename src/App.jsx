@@ -1,22 +1,17 @@
-import { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { useSelector } from "react-redux";
 import BeforeLoginRoutes from "./routes/BeforeLoginRoutes";
 import AfterLoginRoutes from "./routes/AfterLoginRoutes";
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const isAuthenticated = useSelector(
+    (state) => state.authSlice.isAuthenticated
+  );
   return (
-    <>
-      <Router>
-        {!isAuthenticated ? (
-          <BeforeLoginRoutes onLogin={() => setIsAuthenticated(true)} />
-        ) : (
-          <AfterLoginRoutes />
-        )}
-      </Router>
-      {/* <RouterProvider router={router} /> */}
-    </>
+    <Router>
+      {isAuthenticated ? <AfterLoginRoutes /> : ""}
+      <BeforeLoginRoutes />
+    </Router>
   );
 };
 
