@@ -7,7 +7,7 @@ const ContactMe = (props) => {
         <div className="row justify-content-center g-4">
           {props.contact.map((contact, index) => (
             <div key={index} className="col-lg-4">
-              <a className="box-href" href={contact.href}>
+              <a className="box-href" target="_blank" href={contact.href}>
                 <div className="contact-box text-center">
                   <img src={contact.image} alt="#" />
                   <div className="content-text mt-2">

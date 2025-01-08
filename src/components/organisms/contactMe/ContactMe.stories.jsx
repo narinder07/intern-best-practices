@@ -16,7 +16,7 @@ Contact.args = {
     {
       image: address,
       label: "Address",
-      info: "Swaraj enclave 126 mohali",
+      info: "Swaraj Enclave 126 Mohali",
     },
     {
       image: phone,

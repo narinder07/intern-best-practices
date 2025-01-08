@@ -1,5 +1,5 @@
 .contact-box {
-  background-color: #00bbd4ba;
+  background-color: #3cbeee;
   padding: 40px;
   border-radius: 7px;
   transition: 0.4s ease-in-out;
@@ -10,5 +10,5 @@
 }
 .contact-box:hover {
   transform: scale(0.9);
-  background-color: #00bcd4;
+  background-color: #3cbeeeb9;
 }

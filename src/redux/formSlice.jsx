@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   logInForm: {
-    // photoUrl: "www.noolapp.com",
     formValues: { email: "", password: "" },
     errors: {},
   },
