@@ -45,11 +45,14 @@
   color: #fff;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 992px) {
   .top-navbar {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .top-navbar {
+    padding: 16px 5%;
+  }
 }

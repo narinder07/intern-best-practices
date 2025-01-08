@@ -15,27 +15,27 @@ WebMainNavbar.args = {
   classes: "nav-links",
   menuItems: [
     {
-      href: "/",
+      to: "/",
       name: "Home",
       isActive: true,
     },
     {
-      href: "/about",
+      to: "/about",
       name: "About",
       isActive: false,
     },
     {
-      href: "/blog",
+      to: "/blog",
       name: "Blog",
       isActive: false,
     },
     {
-      href: "/services",
+      to: "/services",
       name: "Services",
       isActive: false,
     },
     {
-      href: "/contact",
+      to: "/contact",
       name: "Contact Us",
       isActive: false,
     },

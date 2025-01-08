@@ -11,7 +11,7 @@ const PopularPlaces = (props) => {
           </div>
           <div className="row">
             {props.placesInfo.map((places, placesIndex) => (
-              <div className="col-lg-4 g-4 " key={placesIndex}>
+              <div className="col-lg-4 col-md-6  g-4 " key={placesIndex}>
                 <div className="placesInformation">
                   <img src={places.placesImg} alt={places.alt} />
                   <div className="placesTitle">

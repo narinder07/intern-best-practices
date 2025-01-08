@@ -13,6 +13,6 @@ export const WebIcons = Template({});
 WebIcons.args = {
   label: "Example@gmail.com",
   iconName: "house",
-  ClassNames: "icon",
+  ClassName: "icon",
   href: "#",
 };

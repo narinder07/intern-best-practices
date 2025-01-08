@@ -8,6 +8,7 @@
 }
 .span-text {
   color: #00bcd4;
+  margin-bottom: 40px;
 }
 .social-media {
   display: flex;
@@ -53,4 +54,11 @@
 }
 input:focus {
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-end p,
+  span {
+    font-size: 15px;
+  }
 }

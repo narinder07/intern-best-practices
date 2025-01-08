@@ -2,7 +2,13 @@ import "./LogInForm.css";
 import TextInputLabelField from "../../molecules/textInputLabelField/TextInputLabelField";
 import Button from "../../atoms/button/Button";
 
-const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
+const LogInForm = ({
+  defaultValues,
+  onSubmitLogIn,
+  onChangeEvent,
+  errors,
+  noAccount,
+}) => {
   const handleChange = (event) => {
     if (onChangeEvent) {
       onChangeEvent(event);
@@ -40,6 +46,7 @@ const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
             placeholder="Enter Your Password"
             type="password"
             name="password"
+            formName="logIn"
             onChangeEvent={handleChange}
             error={getErrorMessage("password")}
             value={
@@ -54,8 +61,8 @@ const LogInForm = ({ defaultValues, onSubmitLogIn, onChangeEvent, errors }) => {
               {getErrorMessage("exception")}
             </span>
           )}
-
           <Button label="Login" type="submit" className="login-btn"></Button>
+          <span>{noAccount}</span>
         </form>
       </div>
     </div>
