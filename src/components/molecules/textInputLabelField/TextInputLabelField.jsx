@@ -1,7 +1,6 @@
 import "./TextInputLabelField.css";
 import Label from "../../atoms/label/Label";
 import InputTextField from "../../atoms/inputTextField/InputTextField";
-// import { useState } from "react";
 
 const TextInputLabelField = (props) => {
   const { onChangeEvent, formName } = props;
