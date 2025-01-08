@@ -9,7 +9,8 @@ const initialState = {
     instagram: "http://instagram.com",
     linkedin: "https://x.com/?lang=en&mx=2",
     twitter: "http://twitter.com",
-    gmailRef: "https://mail.google.com/",
+    gmailRef:
+      "https://mail.google.com/mail/?view=cm&fs=1&to=example@gmail.com&su=Hello&body=This%20is%20a%20test%20email.",
   },
   mainNavBarProps: {
     label: "ReactProject",
@@ -46,18 +47,18 @@ const initialState = {
   },
   footerProps: {
     quickLinks: [
-      { href: "#", text: "About Us" },
-      { href: "#", text: "Contact Us" },
-      { href: "#", text: "Our Services" },
-      { href: "#", text: "Term & Condition" },
-      { href: "#", text: "Support" },
+      { href: "/", text: "About Us" },
+      { href: "/", text: "Contact Us" },
+      { href: "/", text: "Our Services" },
+      { href: "/", text: "Term & Condition" },
+      { href: "/", text: "Support" },
     ],
     services: [
-      { href: "#", text: "HTML" },
-      { href: "#", text: "CSS" },
-      { href: "#", text: "Javascript" },
-      { href: "#", text: "Bootstrap" },
-      { href: "#", text: "React Js" },
+      { href: "/", text: "HTML" },
+      { href: "/", text: "CSS" },
+      { href: "/", text: "Javascript" },
+      { href: "/", text: "Bootstrap" },
+      { href: "/", text: "React Js" },
     ],
     label1: "Get In Touch",
     label2: "Quick Links",
