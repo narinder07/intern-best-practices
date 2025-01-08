@@ -1,0 +1,73 @@
+.login-bg-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.534)),
+    url("../../../assets/form_bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  object-fit: cover;
+}
+.login-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(89, 137, 168, 0.413);
+  padding: 40px;
+  width: 450px;
+  border-radius: 10px;
+}
+.login-wrapper h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 600;
+}
+.form-field input {
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+
+.login-wrapper label {
+  color: white;
+}
+.login-wrapper .login-btn {
+  width: 100%;
+  height: 40px;
+  margin-left: 0;
+  margin-top: 10px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.login-wrapper a {
+  text-decoration: none;
+  color: #00bcd4;
+}
+.form-field {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-field input {
+    width: 95%;
+    height: 28px;
+    font-size: 14px;
+  }
+  .login-wrapper {
+    padding: 30px;
+    width: 350px;
+  }
+  .login-wrapper label {
+    font-size: 14px;
+  }
+  .login-wrapper .login-btn {
+    width: 96%;
+    height: 32px;
+    font-size: 12px;
+  }
+}
