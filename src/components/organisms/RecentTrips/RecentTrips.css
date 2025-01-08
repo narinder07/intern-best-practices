@@ -21,3 +21,23 @@
   margin-bottom: 40px;
   color: black;
 }
+
+@media screen and (max-width: 768px) {
+  .recent-trip a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .trip-title h1 {
+    margin-bottom: 30px;
+    color: black;
+  }
+
+  .recent-trip a:hover {
+    color: #1fdff8;
+  }
+  .trip-title h1 {
+    margin-bottom: 40px;
+    color: black;
+  }
+}

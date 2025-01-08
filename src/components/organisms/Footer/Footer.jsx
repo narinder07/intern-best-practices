@@ -1,6 +1,5 @@
 import "./Footer.css";
 import Icon from "../../atoms/icon/Icon";
-import SignUp from "../../molecules/SignUp/SignUp";
 
 const Footer = (props) => {
   return (
@@ -48,22 +47,22 @@ const Footer = (props) => {
                 </li>
               ))}
             </div>
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-3 col-md-6 footer-service-links">
               <h3 className="mb-4 text-white">{props.label1}</h3>
-              <SignUp
-                buttonText="Sign Up"
-                placeholder="Enter Your Email"
-                type="text"
-              />
+              {props.quickLinks.map((links, linksIndex) => (
+                <li key={linksIndex}>
+                  <a href={links.href}>{links.text}</a>
+                </li>
+              ))}
             </div>
           </div>
         </div>
       </footer>
       {/* Copyright footer */}
       <footer className="copyright-footer">
-        <div className="container py-5">
-          <div className="row gy-4">
-            <div className="col-lg-4">
+        <div className="container pt-4">
+          <div className="row gy-3 gy-sm-2">
+            <div className="col-lg-4 footer-end">
               <p className="text-white">
                 <span className={props.copyrightSpanStyle}>
                   {props.copyrightSpan1}
@@ -99,7 +98,7 @@ const Footer = (props) => {
                 ></Icon>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 footer-end">
               <p className="text-white">
                 {props.copyrightText2}
                 <span className={props.copyrightSpanStyle}>

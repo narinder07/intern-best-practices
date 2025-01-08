@@ -1,50 +1,100 @@
-// import "./SignUpPage.css";
-import { useNavigate } from 'react-router-dom';
-import SignUpForm from "../../components/organisms/signUpForm/SignUpForm";  
+import SignUpForm from "../../components/organisms/signUpForm/SignUpForm";
+import SubmitSignUpForm from "../../services/SignUpPageServices";
 import { useSelector, useDispatch } from "react-redux";
-import { setFormValues, setSignUpErrors, clearSignUpError } from "../../components/organisms/signUpForm/SignupFormSlice"; 
-import { setUserData } from "../../redux/commonSlices/AuthSlice"; 
-import SubmitSignUpForm  from "../../services/SignUpPageServices";
+import { SignUpValidationSchema } from "../../validations/SignUpFormValidationSchema";
+import {
+  setFormValues,
+  setFormErrors,
+  clearFormErrors,
+} from "../../redux/FormSlice";
+import { useNavigate } from "react-router-dom";
+import { setUserData } from "../../redux/commonSlices/AuthSlice";
+import { useState } from "react";
 
-const SignUpPage = (props) => {
-
-
-  const formValues = useSelector((state) => state.signUpFormSlice.formValues);
-  const errors = useSelector((state) => state.signUpFormSlice.errors);
+const SignUpPage = () => {
+  const formValues = useSelector(
+    (state) => state.formSlice.signUpForm.formValues
+  );
+  const errors = useSelector((state) => state.formSlice.signUpForm.errors);
   const userDetails = useSelector((state) => state.authSlice.authData);
 
   const dispatch = useDispatch(); // Define the dispatch function to dispatch an action
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState(false);
 
   const onSubmitHandle = async (e) => {
+    setLoading(true);
     e.preventDefault();
-    const result = await SubmitSignUpForm(formValues);
-    if (result.errors) dispatch(setSignUpErrors({ errors: result.errors }));
-    if(result.status === "success"){
-      dispatch(setUserData( result.data ));
-      navigate("/dashboard");
+    try {
+      await SignUpValidationSchema.validate(formValues, { abortEarly: false }); //formValues has inputValues like userName,displayName,password etc and we are checking if formValues matched the  SignUpValidationSchema validation it will be pass if they don't matched it will throw the error
+      const result = await SubmitSignUpForm(formValues);
+      //basically we send formValues to the server by using SubmitSignUpForm to create  a new user account basically The formValues has stored the data that the user entered when signing up (e.g., username, email, password).
+      if (result.errors) {
+        // checking if we get a error we dispatch the setSignUpErrors
+        dispatch(
+          setFormErrors({ formName: "signUpForm", errors: result.errors })
+        );
+      } else if (result.status === "success") {
+        // if result is success we dispatch setUserData and navigate dashboard page
+        dispatch(setUserData(result.data));
+        navigate("/dashboard");
+      }
+    } catch (validationErrors) {
+      // if our validation is failed
+      //
+      const formattedErrors = {}; // formattedErrors is an error empty object we are storing errors in formattedErrors
+      validationErrors.inner.forEach((error) => {
+        // to show all errors in each fields by using forEach
+        formattedErrors[error.path] = error.message;
+      });
+      dispatch(
+        setFormErrors({ formName: "signUpForm", errors: formattedErrors })
+      ); // dispatch the setSignUpErrors from redux errors and set into the formattedErrors
+    } finally {
+      setLoading(false);
     }
   };
 
-  const onChangeHandle = (e) => {
+  const onChangeHandle = async (e) => {
     const { name, value } = e.target;
-    dispatch(setFormValues({ formValues: { [name]: value } }));
-    dispatch(clearSignUpError({ name }));
+    dispatch(
+      setFormValues({
+        formName: "signUpForm",
+        formValues: { [name]: value },
+      })
+    );
+    try {
+      await SignUpValidationSchema.validateAt(name, { [name]: value });
+      dispatch(clearFormErrors({ formName: "signUpForm", name }));
+    } catch (error) {
+      dispatch(
+        setFormErrors({
+          formName: "signUpForm",
+          errors: { [name]: error.message },
+        })
+      );
+    }
   };
 
   return (
-    <section className="form-bg-img section-padding">
+    <section className="form-bg-img">
       <div className="signUp-form-wrapper">
-        <h1>{props.formCaption}</h1>
-        {(userDetails && userDetails.token) ? <div className="alert alert-success">User {userDetails.displayName} created successfully</div> : ""}
+        {userDetails && userDetails.token ? (
+          <div className="alert alert-success">
+            User {userDetails.displayName} created successfully
+          </div>
+        ) : (
+          ""
+        )}
         <SignUpForm
           defaultValues={formValues}
           onChangeEvent={onChangeHandle}
           onSubmitEvent={onSubmitHandle}
           errors={errors}
+          loading={loading}
         />
-      </div>  
+      </div>
     </section>
   );
 };

@@ -1,7 +1,6 @@
 import CommonTemplate from "../../templates/common/CommonTemplate";
 import HeaderLinksImages from "../../components/organisms/HeaderLinksImages/HeaderLinksImages";
 import PopularPlaces from "../../components/organisms/PopularPlaces/PopularPlaces";
-
 import { useSelector } from "react-redux";
 
 const ServicesPage = () => {

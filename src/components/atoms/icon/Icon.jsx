@@ -19,7 +19,11 @@ const Icon = (props) => {
     <>
       <li className={props.liClass}>
         <a target="_blank" href={props.href}>
-          <FontAwesomeIcon className={props.class} icon={icon} />
+          <FontAwesomeIcon
+            className={props.class}
+            onClick={props.onClick}
+            icon={icon}
+          />
           {props.label}
         </a>
       </li>

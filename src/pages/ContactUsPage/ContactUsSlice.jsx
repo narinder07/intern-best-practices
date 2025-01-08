@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import sectionImg3 from "../../assets/section_img3.jpg";
+import address from "../../assets/address.png";
+import phone from "../../assets/phone.png";
+import email from "../../assets/email.png";
 
 const initialState = {
   headerImagesProps: {
@@ -7,18 +10,26 @@ const initialState = {
     mainImg: sectionImg3,
     alt: "About us Image",
   },
-
-  formProps: {
-    formHeading: "Contact Us",
-    formTitle: "Get In Touch With Us",
-    formPara: "Join me on my journey—let's explore the world together",
-    email: "narindersingh0069@gmail.com",
-    phone: "+919115955017",
-    location: "69 Street India",
-    facebook: "http://facebook.com",
-    instagram: "http://instagram.com",
-    linkedin: "https://x.com/?lang=en&mx=2",
-    twitter: "http://twitter.com",
+  contactMeProps: {
+    contact: [
+      {
+        image: address,
+        label: "Address",
+        info: "Swaraj Enclave 126 Mohali",
+      },
+      {
+        image: phone,
+        label: "Call Us",
+        info: "9115955017",
+        href: "tel:9115955017",
+      },
+      {
+        image: email,
+        label: "Email Us",
+        info: "narindersingh00690@gmail.com",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=example@gmail.com&su=Hello&body=This%20is%20a%20test%20email.",
+      },
+    ],
   },
 };
 
@@ -29,10 +40,10 @@ export const contactUsSlice = createSlice({
     headerImages: (state) => {
       state.headerImagesProps;
     },
-    form: (state) => {
-      state.formProps;
+    contactMe: (state) => {
+      state.contactMeProps;
     },
   },
 });
-export const { form, headerImages } = contactUsSlice.actions;
+export const { headerImages, contactMe } = contactUsSlice.actions;
 export default contactUsSlice.reducer;

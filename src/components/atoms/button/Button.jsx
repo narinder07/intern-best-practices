@@ -1,12 +1,9 @@
 import "./Button.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-const Button = (props) => {
+const Button = ({ label, type, className, onClick }) => {
   return (
-    <button className={props.className} type={props.type}>
-      {props.label}
-      <FontAwesomeIcon className="mx-2" icon={faArrowRight} />
+    <button className={className} type={type} onClick={onClick}>
+      {label}
     </button>
   );
 };

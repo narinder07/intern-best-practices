@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
-import Dashboard from '../pages/dashboard/Dashboard';
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "../pages/dashboard/Dashboard";
 
 const AfterLoginRoutes = () => {
   return (
