@@ -1,0 +1,14 @@
+.contact-box {
+  background-color: #3cbeee;
+  padding: 40px;
+  border-radius: 7px;
+  transition: 0.4s ease-in-out;
+}
+.box-href {
+  text-decoration: none;
+  color: black;
+}
+.contact-box:hover {
+  transform: scale(0.9);
+  background-color: #3cbeeeb9;
+}
