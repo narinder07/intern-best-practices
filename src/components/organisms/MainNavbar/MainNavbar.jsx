@@ -2,23 +2,24 @@ import "./MainNavbar.css";
 import Logo from "../../atoms/logo/Logo";
 import UnOrderList from "../../molecules/UnOrderList/UnOrderList";
 import Button from "../../atoms/button/Button";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import Icon from "../../atoms/icon/Icon";
+import { toggleNavbar } from "../../../redux/ToggleSlice";
 
 const MainNavbar = (props) => {
   const { isAuthenticated } = useSelector((state) => state.authSlice);
-
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleClick = (link) => {
     navigate(link);
   };
 
   // for responsive navbar
-  const [showMenuLinks, setShowMenuLinks] = useState(false);
+  const showMenuLinks = useSelector((state) => state.toggleReducer.showNavbar);
   const toggleMenuLinks = () => {
-    setShowMenuLinks(!showMenuLinks);
+    dispatch(toggleNavbar());
   };
 
   return (
