@@ -17,3 +17,13 @@
   background-color: #021016;
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .travel-with-us h1 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+  .travel-with-us a {
+    padding: 8px 12px;
+  }
+}

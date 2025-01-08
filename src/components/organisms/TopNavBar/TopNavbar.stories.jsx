@@ -16,4 +16,6 @@ WebTopNavbar.args = {
   instagram: "http://instagram.com",
   linkedin: "https://x.com/?lang=en&mx=2",
   twitter: "http://twitter.com",
+  gmailRef:
+    "https://mail.google.com/mail/?view=cm&fs=1&to=example@gmail.com&su=Hello&body=This%20is%20a%20test%20email.",
 };

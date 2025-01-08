@@ -3,8 +3,8 @@ import "./RecentTrips.css";
 const RecentTrips = (props) => {
   return (
     <section>
-      <div className="container section-padding">
-        <div className="row">
+      <div className="container   section-padding">
+        <div className="row ">
           <div className="col-lg-12 text-center trip-title">
             <h1>{props.tripLabel}</h1>
           </div>

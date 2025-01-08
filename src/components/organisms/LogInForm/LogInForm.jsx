@@ -2,28 +2,67 @@ import "./LogInForm.css";
 import TextInputLabelField from "../../molecules/textInputLabelField/TextInputLabelField";
 import Button from "../../atoms/button/Button";
 
-const LogInForm = (props) => {
+const LogInForm = ({
+  defaultValues,
+  onSubmitLogIn,
+  onChangeEvent,
+  errors,
+  noAccount,
+}) => {
+  const handleChange = (event) => {
+    if (onChangeEvent) {
+      onChangeEvent(event);
+    }
+  };
+
+  // Extract error message for a specific field
+  const getErrorMessage = (fieldName) => {
+    if (errors && errors[fieldName]) {
+      console.log("errors", errors[fieldName]);
+      return errors[fieldName];
+    }
+    return "";
+  };
+
   return (
     <div className="login-bg-img">
       <div className="login-wrapper">
-        <h1>{props.formCaption}</h1>
-        <form onSubmit={props.handleLogIn}>
+        <form onSubmit={onSubmitLogIn}>
           <TextInputLabelField
             label="Email Address"
             placeholder="Enter Your Email Address"
             type="email"
             name="email"
+            value={
+              defaultValues !== undefined && defaultValues.email
+                ? defaultValues.email
+                : ""
+            }
+            onChangeEvent={handleChange}
+            error={getErrorMessage("email")}
           ></TextInputLabelField>
           <TextInputLabelField
             label="Password"
             placeholder="Enter Your Password"
             type="password"
             name="password"
+            formName="logIn"
+            onChangeEvent={handleChange}
+            error={getErrorMessage("password")}
+            value={
+              defaultValues !== undefined && defaultValues.password
+                ? defaultValues.password
+                : ""
+            }
           ></TextInputLabelField>
-          <Button label="Login" type="button" className="login-btn"></Button>
-          <p className="mt-3 text-white">
-            {props.noAccount} <a href="#">{props.signUpHere}</a>
-          </p>
+
+          {getErrorMessage("exception") && (
+            <span className="exception-error text-danger">
+              {getErrorMessage("exception")}
+            </span>
+          )}
+          <Button label="Login" type="submit" className="login-btn"></Button>
+          <span>{noAccount}</span>
         </form>
       </div>
     </div>

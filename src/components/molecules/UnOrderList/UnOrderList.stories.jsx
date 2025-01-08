@@ -11,12 +11,14 @@ export const MenuLinks = Template.bind({});
 MenuLinks.args = {
   menuItems: [
     {
-      href: "/",
+      to: "/",
       name: "Home",
+      isActive: true,
     },
     {
-      href: "/about",
+      to: "/about",
       name: "About",
+      isActive: false,
     },
   ],
   classes: "nav-links",
