@@ -7,6 +7,7 @@ import ContactUsPage from "../pages/ContactUsPage/ContactUsPage";
 import SignUpPage from "../pages/signUpPage/SignUpPage";
 import ProtectedRoute from "./ProtectedRoutes";
 import LogInPage from "../pages/loginPage/LoginPage";
+import NotFoundPageError from "../pages/notFoundPageError/NotFoundPageError";
 
 const BeforeLoginRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const BeforeLoginRoutes = () => {
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LogInPage />} />
+      <Route path="*" element={<NotFoundPageError />} />
       <Route
         path="/signup"
         element={<ProtectedRoute element={<SignUpPage />} />}

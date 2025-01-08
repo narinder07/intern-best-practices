@@ -8,6 +8,7 @@ import commonTemplateReducer from "../templates/common/CommonTemplateSlice";
 import authSlice from "../redux/commonSlices/AuthSlice";
 import formSlice from "../redux/FormSlice";
 import toggleReducer from "../redux/ToggleSlice";
+import NotFoundPageReducer from "../pages/notFoundPageError/NotFoundPageErrorSlice";
 
 const store = configureStore({
   reducer: {
@@ -20,6 +21,7 @@ const store = configureStore({
     authSlice: authSlice,
     formSlice: formSlice,
     toggleReducer: toggleReducer,
+    NotFoundPageReducer: NotFoundPageReducer,
   },
 });
 

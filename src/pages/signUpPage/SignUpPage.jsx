@@ -9,6 +9,7 @@ import {
 } from "../../redux/FormSlice";
 import { useNavigate } from "react-router-dom";
 import { setUserData } from "../../redux/commonSlices/AuthSlice";
+import { useState } from "react";
 
 const SignUpPage = () => {
   const formValues = useSelector(
@@ -20,11 +21,15 @@ const SignUpPage = () => {
   const dispatch = useDispatch(); // Define the dispatch function to dispatch an action
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmitHandle = async (e) => {
+    setLoading(true);
     e.preventDefault();
     try {
       await SignUpValidationSchema.validate(formValues, { abortEarly: false }); //formValues has inputValues like userName,displayName,password etc and we are checking if formValues matched the  SignUpValidationSchema validation it will be pass if they don't matched it will throw the error
-      const result = await SubmitSignUpForm(formValues); //basically we send formValues to the server by using SubmitSignUpForm to create  a new user account basically The formValues has stored the data that the user entered when signing up (e.g., username, email, password).
+      const result = await SubmitSignUpForm(formValues);
+      //basically we send formValues to the server by using SubmitSignUpForm to create  a new user account basically The formValues has stored the data that the user entered when signing up (e.g., username, email, password).
       if (result.errors) {
         // checking if we get a error we dispatch the setSignUpErrors
         dispatch(
@@ -46,6 +51,8 @@ const SignUpPage = () => {
       dispatch(
         setFormErrors({ formName: "signUpForm", errors: formattedErrors })
       ); // dispatch the setSignUpErrors from redux errors and set into the formattedErrors
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -85,6 +92,7 @@ const SignUpPage = () => {
           onChangeEvent={onChangeHandle}
           onSubmitEvent={onSubmitHandle}
           errors={errors}
+          loading={loading}
         />
       </div>
     </section>

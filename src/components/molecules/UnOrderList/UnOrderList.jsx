@@ -9,7 +9,6 @@ const UnOrderList = (props) => {
     return null;
   }
 
-  // console.log("menuItems :", menuItems);
   return (
     <ul className={showMenuLinks ? "nav-links active" : "nav-links"}>
       {menuItems.map((navLinks, linksIndex) => (

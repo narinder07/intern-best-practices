@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Provider } from 'react-redux';
-import  store from '../src/redux/Store';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from "react-redux";
+import store from "../src/redux/Store";
+import { BrowserRouter as Router } from "react-router-dom";
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -21,11 +21,11 @@ const preview = {
         <Provider store={store}>
           <Router>
             <Story />
-          </Router> 
+          </Router>
         </Provider>
       );
     },
-  ]
+  ],
 };
 
 export default preview;
