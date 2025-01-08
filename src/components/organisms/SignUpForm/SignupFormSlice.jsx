@@ -1,10 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   formValues: {
     photoUrl: "www.noolapp.com",
   },
-  errors: {}
+  errors: {},
 };
 
 const signUpFormSlice = createSlice({
@@ -30,5 +30,6 @@ const signUpFormSlice = createSlice({
   },
 });
 
-export const { setFormValues, setSignUpErrors, clearSignUpError } = signUpFormSlice.actions;
+export const { setFormValues, setSignUpErrors, clearSignUpError } =
+  signUpFormSlice.actions;
 export default signUpFormSlice.reducer;

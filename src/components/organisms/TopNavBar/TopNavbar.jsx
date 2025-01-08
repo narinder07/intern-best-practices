@@ -10,6 +10,7 @@ const TopNavbar = (props) => {
           class="social-icon"
           iconName="envelope"
           label={props.email}
+          href={props.gmailRef}
         ></Icon>
         <Icon
           liClass="me-3"

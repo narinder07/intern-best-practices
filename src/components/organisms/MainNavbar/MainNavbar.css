@@ -5,14 +5,25 @@
   justify-content: space-between;
   padding: 16px 7%;
   background-color: #f9f8f6;
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.main-nav .nav-links {
-  align-items: center;
-  margin-top: 15px;
-  padding: 0;
+.logo-style {
+  color: #3cbeee;
+  font-size: 34px;
+  transition: 0.4s;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
 }
-
+.logo-style:hover {
+  color: #1fa9dbdd;
+}
+.nav-links {
+  display: flex;
+}
 .nav-links li a {
   text-decoration: none;
   padding: 0 20px;
@@ -20,10 +31,33 @@
   color: #021016;
   transition: 0.4s;
   cursor: pointer;
+  position: relative;
+}
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  height: 3px;
+  width: 0;
+  background-color: #00bcd4;
+  transition: width 0.4s ease;
+}
+.nav-links li a:hover::after {
+  width: 70%;
 }
 .nav-links li a:hover {
   color: #00bcd4 !important;
 }
+.nav-links li {
+  list-style: none;
+}
+.main-nav .nav-links {
+  align-items: center;
+  margin-top: 15px;
+  padding: 0;
+}
+
 .button .sign-up {
   padding: 10px 20px;
 }
@@ -32,4 +66,99 @@
 }
 .login-btn {
   margin-left: 10px;
+}
+.hamburger li a svg {
+  display: none;
+}
+
+/* 
+media query for mobile screen */
+@media screen and (max-width: 1200px) {
+  .main-nav {
+    padding: 16px 5%;
+  }
+  .logo-style {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-nav {
+    padding: 16px 2%;
+  }
+  .logo-style {
+    font-size: 28px;
+  }
+  .nav-links li a {
+    padding: 0 10px;
+    font-size: 16px !important;
+  }
+  .button .sign-up {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  .button .login-btn {
+    padding: 6px 10px;
+    margin-right: 50px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-style {
+    font-size: 28px;
+  }
+  .main-nav {
+    padding: 16px 0%;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #f9f8f6;
+    width: 100%;
+    top: 59px;
+    height: 50%;
+    display: none;
+  }
+  .nav-links.active {
+    display: inline-block;
+  }
+  .nav-links li {
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .nav-links li a {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  .nav-links li a::after {
+    bottom: -4px;
+    left: 10px;
+    height: 2px;
+  }
+
+  .button .sign-up {
+    padding: 4px 8px;
+    font-size: 15px;
+  }
+  .button .login-btn {
+    padding: 4px 8px;
+    margin-right: 50px;
+    font-size: 15px;
+  }
+  .hamburger li a svg {
+    position: absolute;
+    right: 8px;
+    top: 22px;
+    display: inline-block;
+    color: #3cbeee;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .hamburger li a svg:hover {
+    color: #021016;
+  }
 }

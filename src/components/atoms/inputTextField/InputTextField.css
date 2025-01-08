@@ -1,1 +1,8 @@
+.inputError {
+  border: 1px solid red;
+  outline: none;
+}
 
+.inputError:focus {
+  outline: 2px solid #ff6666;
+}
