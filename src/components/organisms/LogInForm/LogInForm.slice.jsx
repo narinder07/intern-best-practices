@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   formValues: {
-    // photoUrl: "www.noolapp.com",
-    email: "",
-    password: "",
+    photoUrl: "www.noolapp.com",
+    // email: "",
+    // password: "",
   },
   errors: {},
 };

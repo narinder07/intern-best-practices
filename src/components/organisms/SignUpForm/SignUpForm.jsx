@@ -7,6 +7,7 @@ const SignUpForm = ({
   onChangeEvent,
   onSubmitEvent,
   errors,
+  loading,
 }) => {
   ``;
   const handleChange = (event) => {
@@ -14,8 +15,6 @@ const SignUpForm = ({
       onChangeEvent(event);
     }
   };
-
-  console.log("errors", errors);
 
   // Extract error message for a specific field
   const getErrorMessage = (fieldName) => {
@@ -76,6 +75,7 @@ const SignUpForm = ({
               placeholder="Enter your password"
               name="password"
               type="password"
+              formName="signUp"
               value={
                 defaultValues !== undefined && defaultValues.password
                   ? defaultValues.password
@@ -88,6 +88,7 @@ const SignUpForm = ({
             <TextInputLabelField
               label="Confirm Password"
               placeholder="Enter your confirm password"
+              formName="signUp"
               name="confirmPassword"
               type="password"
               value={
@@ -104,7 +105,17 @@ const SignUpForm = ({
               </span>
             )}
 
-            <Button label="Submit" className="primary" type="submit"></Button>
+            <Button
+              label={
+                loading ? (
+                  <span className="spinner-border text-white"></span>
+                ) : (
+                  "Submit"
+                )
+              }
+              className="primary"
+              type="submit"
+            ></Button>
           </form>
         </div>
       </div>

@@ -10,18 +10,18 @@ const Template = (args) => <Footer {...args}></Footer>;
 export const FooterSection = Template.bind({});
 FooterSection.args = {
   quickLinks: [
-    { href: "#", text: "About Us" },
-    { href: "#", text: "Contact Us" },
-    { href: "#", text: "Our Services" },
-    { href: "#", text: "Term & Condition" },
-    { href: "#", text: "Support" },
+    { href: "/", text: "About Us" },
+    { href: "/", text: "Contact Us" },
+    { href: "/", text: "Our Services" },
+    { href: "/", text: "Term & Condition" },
+    { href: "/", text: "Support" },
   ],
   services: [
-    { href: "#", text: "HTML" },
-    { href: "#", text: "CSS" },
-    { href: "#", text: "Javascript" },
-    { href: "#", text: "Bootstrap" },
-    { href: "#", text: "React Js" },
+    { href: "/", text: "HTML" },
+    { href: "/", text: "CSS" },
+    { href: "/", text: "Javascript" },
+    { href: "/", text: "Bootstrap" },
+    { href: "/", text: "React Js" },
   ],
   label1: "Get In Touch",
   label2: "Quick Links",
@@ -34,6 +34,6 @@ FooterSection.args = {
   copyrightText1: " All right reserved.",
   copyrightText2: " Designed By ",
   copyrightText3: " By Using ",
-  copyrightText4: "React and Bootstrap",
+  copyrightText4: "React Bootstrap Redux Toolkit and StoryBook Atomic Design",
   copyrightSpanStyle: "span-text",
 };

@@ -1,4 +1,4 @@
-.nav-links {
+/* .nav-links {
   display: flex;
 }
 
@@ -9,10 +9,10 @@
 }
 .nav-links li {
   list-style: none;
-}
+} */
 .menu-active {
   color: #00bcd4;
 }
 .menu {
-  color: black;
+  color: green;
 }

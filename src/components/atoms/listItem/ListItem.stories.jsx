@@ -9,7 +9,7 @@ const Template = (args) => <ListItem {...args} />;
 
 export const HomeTab = Template.bind({});
 HomeTab.args = {
-  to: "/",
+  href: "/",
   name: "Home",
   classes: "list-items",
 };

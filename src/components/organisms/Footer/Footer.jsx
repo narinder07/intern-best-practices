@@ -60,9 +60,9 @@ const Footer = (props) => {
       </footer>
       {/* Copyright footer */}
       <footer className="copyright-footer">
-        <div className="container py-5">
-          <div className="row gy-4">
-            <div className="col-lg-4">
+        <div className="container pt-4">
+          <div className="row gy-3 gy-sm-2">
+            <div className="col-lg-4 footer-end">
               <p className="text-white">
                 <span className={props.copyrightSpanStyle}>
                   {props.copyrightSpan1}
@@ -98,7 +98,7 @@ const Footer = (props) => {
                 ></Icon>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 footer-end">
               <p className="text-white">
                 {props.copyrightText2}
                 <span className={props.copyrightSpanStyle}>

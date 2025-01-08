@@ -19,6 +19,12 @@ const Testimonials = (props) => {
           spaceBetween={20}
           slidesPerView={3}
           autoplay={{ delay: 2500 }}
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 10 }, // For small devices
+            640: { slidesPerView: 1, spaceBetween: 10 }, // For larger phones
+            768: { slidesPerView: 2, spaceBetween: 10 }, // For tablets
+            1024: { slidesPerView: 3, spaceBetween: 10 }, // For desktops
+          }}
           modules={[Navigation, Autoplay, EffectFade]}
           style={{ "--swiper-pagination-bullet-size": "15px" }}
         >
