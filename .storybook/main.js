@@ -1,27 +1,33 @@
 // .storybook/main.js
+import { createProxyMiddleware } from "http-proxy-middleware";
 
-module.exports = {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
-
-  addons: [
-    "@storybook/addon-links", // other addons
-    "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-  ],
-
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
-  },
-
-  viteFinal: async (config) => {
-    // Modify or add to the existing Vite config
-    return config;
-  },
-
-  docs: {},
-
-  typescript: {
-    reactDocgen: "react-docgen-typescript",
-  },
+export const stories = ["../src/**/*.stories.@(js|jsx|ts|tsx)"];
+export const addons = [
+  "@storybook/addon-links",
+  "@storybook/addon-essentials",
+  "@chromatic-com/storybook",
+];
+export const framework = {
+  name: "@storybook/react-vite",
+  options: {},
 };
+export const docs = {};
+export const typescript = {
+  reactDocgen: "react-docgen-typescript",
+};
+
+export async function viteFinal(config) {
+  // Add proxy configuration
+  config.server = {
+    ...config.server,
+    proxy: {
+      "/api": {
+        target: "https://dpxcode-travel-c1f8664525c9.herokuapp.com",
+        secure: false,
+        changeOrigin: true,
+      },
+    },
+  };
+
+  return config;
+}
