@@ -99,11 +99,6 @@ const SignUpForm = ({
               onChangeEvent={handleChange}
               error={getErrorMessage("confirmPassword")}
             />
-            {getErrorMessage("exception") && (
-              <span className="exception-error text-danger">
-                {getErrorMessage("exception")}
-              </span>
-            )}
 
             <Button
               label={
